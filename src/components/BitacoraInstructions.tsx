@@ -46,7 +46,7 @@ export default function BitacoraInstructions() {
                     <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-[117px] h-[51px] rotate-3 z-20 drop-shadow-lg">
                         <Image src="/tape.png" alt="" fill className="object-contain" />
                     </div>
-                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl transform rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
                         <Image src="/inspiration.png" alt="Grabando video" fill className="object-cover" />
                     </div>
                 </div>
@@ -59,7 +59,7 @@ export default function BitacoraInstructions() {
                     <div className="absolute -top-5 left-1/2 -translate-x-1/2 w-[117px] h-[51px] -rotate-2 z-20 drop-shadow-lg">
                         <Image src="/tape.png" alt="" fill className="object-contain" />
                     </div>
-                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl transform -rotate-2 hover:rotate-0 transition-transform duration-500">
+                    <div className="relative aspect-video rounded-lg overflow-hidden shadow-2xl">
                         <Image src="/gallery-2.png" alt="Setup de grabación" fill className="object-cover" />
                     </div>
                 </div>

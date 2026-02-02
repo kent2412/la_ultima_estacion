@@ -30,7 +30,7 @@ export function AnthologySection() {
                         <Image src="/tape.png" alt="" fill className="object-contain" />
                     </div>
 
-                    <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl skew-y-2 transform transition-transform hover:skew-y-0">
+                    <div className="relative w-full h-full rounded-lg overflow-hidden shadow-2xl">
                         <Image
                             src="/gallery-1.png" // Using gallery image as "Book Cover" or scene
                             alt="Antología Cover"
