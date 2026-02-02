@@ -175,7 +175,8 @@ export interface Dictionary {
                 firstItems: { title: string; desc: string; }[];
 
 
-                productsGridTitle: string; // "Products" (implicit or explicit)
+                gridTitle: string;
+                viewShop: string;
                 placeholderProducts: { title: string; desc: string; price: string; button: string; img: string; }[];
 
                 gearUpTitle: string;
@@ -403,7 +404,8 @@ export interface Dictionary {
                 firstItems: { title: string; desc: string; }[];
 
 
-                productsGridTitle: string;
+                gridTitle: string;
+                viewShop: string;
                 placeholderProducts: { title: string; desc: string; price: string; button: string; img: string; }[];
 
                 gearUpTitle: string;
@@ -726,7 +728,8 @@ export const dictionary: Dictionary = {
                 ],
 
 
-                productsGridTitle: "Products", // Hidden but useful for structure
+                gridTitle: "Products",
+                viewShop: "View Shop",
                 placeholderProducts: [
                     { title: "Product 1", desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.", price: "$49.99", button: "View", img: "/product-placeholder.jpg" },
                     { title: "Product 2", desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.", price: "$49.99", button: "View", img: "/product-placeholder.jpg" },
@@ -1158,7 +1161,8 @@ export const dictionary: Dictionary = {
                     { title: "[Otros productos por confirmar]", desc: "" }
                 ],
 
-                productsGridTitle: "Productos",
+                gridTitle: "Productos",
+                viewShop: "Ver Tienda",
                 placeholderProducts: [
                     { title: "Producto 1", desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.", price: "$49.99", button: "Ver", img: "/product-placeholder.jpg" },
                     { title: "Producto 2", desc: "Lorem ipsum is simply dummy text of the printing and typesetting industry.", price: "$49.99", button: "Ver", img: "/product-placeholder.jpg" },
