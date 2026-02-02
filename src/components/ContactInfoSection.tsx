@@ -11,7 +11,7 @@ export default function ContactInfoSection() {
                 {/* Heading */}
                 <div>
                     <h2 className="text-4xl md:text-5xl font-bold text-white mb-2 leading-tight">
-                        {t.pages.press.contactTitle}
+                        {t.pages.press.contactInfoTitle}
                     </h2>
                 </div>
 
@@ -21,14 +21,14 @@ export default function ContactInfoSection() {
                         <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                             <Phone className="w-5 h-5 text-white" />
                         </div>
-                        <span className="font-mono tracking-wider">111 111 1111 111</span>
+                        <span className="font-mono tracking-wider">{t.pages.press.phone}</span>
                     </div>
 
                     <div className="flex items-center gap-4 text-gray-300">
                         <div className="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center shrink-0">
                             <Mail className="w-5 h-5 text-white" />
                         </div>
-                        <span className="font-mono tracking-wider">user@gmail.com</span>
+                        <span className="font-mono tracking-wider">{t.pages.press.email}</span>
                     </div>
 
                     <div className="flex items-start gap-4 text-gray-300">

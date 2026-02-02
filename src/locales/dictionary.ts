@@ -99,6 +99,7 @@ export interface Dictionary {
                 producerLabel: string; // "Executive Producer"
                 producerName: string;
                 producerEmail: string;
+                contactAddress: string;
 
                 dossierTitle: string; // "Electronic Press Kit (EPK)"
                 epkAvailable: string; // "Available: February 2026"
@@ -328,6 +329,7 @@ export interface Dictionary {
                 producerLabel: string;
                 producerName: string;
                 producerEmail: string;
+                contactAddress: string;
 
                 dossierTitle: string;
                 epkAvailable: string;
@@ -601,6 +603,7 @@ export const dictionary: Dictionary = {
                 producerLabel: "Executive Producer:",
                 producerName: "Jackie Zambrano",
                 producerEmail: "jaz@jackiezambrano.com",
+                contactAddress: "Miami, FL",
 
                 dossierTitle: "Electronic Press Kit (EPK)",
                 epkAvailable: "Available: February 2026",
@@ -1033,6 +1036,7 @@ export const dictionary: Dictionary = {
                 producerLabel: "Productora Ejecutiva:",
                 producerName: "Jackie Zambrano",
                 producerEmail: "jaz@jackiezambrano.com",
+                contactAddress: "Miami, FL",
 
                 dossierTitle: "Dosier de Prensa Electrónico (EPK)",
                 epkAvailable: "Disponible: Febrero 2026",
