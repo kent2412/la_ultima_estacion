@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #000000;
+  --foreground: #FFFFFF;
+  --accent-tape: #E8D860;
+  --color-text-secondary: #E0E0E0;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-accent-tape: var(--accent-tape);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+  --font-copperplate: var(--font-copperplate);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* Mantenemos un tema claro por defecto como el diseño, o ajustamos levemente */
+    --background: #000000;
+    --foreground: #FFFFFF;
   }
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+}
+
+.bg-trailer {
+  background-image: url('../../public/bg_trailer.png');
+  background-size: cover;
+  background-position: center;
+}
+
+.bg-footer {
+  background-image: url('../../public/bg_footer.png');
+  background-size: cover;
+  background-position: center;
 }
