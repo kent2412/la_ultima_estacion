@@ -22,9 +22,6 @@ export default function CastGrid() {
                         <div key={idx} className="flex flex-col md:flex-row gap-6 items-stretch">
                             {/* Image with Tape */}
                             <div className="relative w-full md:w-[300px] aspect-square shrink-0">
-                                <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-[117px] h-[51px] z-20">
-                                    <Image src="/tape.png" alt="" fill className="object-contain" />
-                                </div>
                                 <div className="relative w-full h-full overflow-hidden rounded-lg bg-gray-800">
                                     <Image
                                         src={member.img || "/inspiration.png"}
