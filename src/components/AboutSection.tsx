@@ -11,7 +11,7 @@ export default function AboutSection() {
             <div className="container mx-auto flex flex-col md:flex-row items-center gap-12">
                 {/* Image Placeholder */}
                 <div className="relative w-full md:w-1/2 aspect-video shadow-lg">
-                    <Image src="/home_1.jpg" alt="El viaje comienza" fill className="object-cover" />
+                    <Image src="/_86A8443.jpg" alt="El viaje comienza" fill className="object-cover" />
                     {/* Tape decoration */}
                     <div className="absolute -top-6 left-1/2 -translate-x-1/2 w-[117px] h-[51px] rotate-[-2deg] shadow-sm z-10">
                         <Image src="/tape.png" alt="" fill className="object-contain" />

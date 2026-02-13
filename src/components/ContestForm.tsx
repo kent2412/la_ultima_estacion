@@ -97,34 +97,41 @@ export default function ContestForm() {
                     <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
 
                     {/* Prizes & Copyright */}
-                    <div className="grid md:grid-cols-2 gap-10 items-start">
+                    {/* Prizes & Copyright */}
+                    <div className="space-y-12">
                         {/* Prizes */}
-                        <div className="space-y-4">
-                            <h3 className="text-xl font-bold text-[#E8D860] uppercase tracking-widest">{t.pages.contest.prizesLabel}</h3>
-                            <ul className="space-y-3 text-gray-300 border-l border-white/10 pl-6 py-2">
-                                <li className="font-bold text-white text-lg flex items-center gap-3">
-                                    <span className="text-2xl">🥇</span> {t.pages.contest.prizesList.first}
-                                </li>
-                                <li className="font-bold text-white/90 text-base flex items-center gap-3">
-                                    <span className="text-xl">🥈</span> {t.pages.contest.prizesList.second}
-                                </li>
-                                <li className="font-bold text-white/80 text-base flex items-center gap-3">
-                                    <span className="text-xl">🥉</span> {t.pages.contest.prizesList.third}
-                                </li>
-                                <li className="text-sm pt-2 text-gray-400 italic leading-snug">{t.pages.contest.prizesList.final}</li>
-                                <li className="text-sm text-gray-400 italic leading-snug">{t.pages.contest.prizesList.video}</li>
-                            </ul>
+                        <div className="space-y-6">
+                            <h3 className="text-2xl font-bold text-[#E8D860] uppercase tracking-widest text-center">{t.pages.contest.prizesLabel}</h3>
+                            <div className="overflow-x-auto bg-black/20 p-6 rounded-xl border border-white/5 shadow-inner">
+                                <table className="w-full text-left border-collapse">
+                                    <thead>
+                                        <tr className="border-b border-white/20">
+                                            <th className="py-4 px-6 font-copperplate text-[#E8D860] uppercase tracking-wider text-sm w-1/4">{t.pages.contest.prizesTable.headers.prize}</th>
+                                            <th className="py-4 px-6 font-copperplate text-[#E8D860] uppercase tracking-wider text-sm w-1/4">{t.pages.contest.prizesTable.headers.amount}</th>
+                                            <th className="py-4 px-6 font-copperplate text-[#E8D860] uppercase tracking-wider text-sm w-1/2">{t.pages.contest.prizesTable.headers.benefits}</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody className="text-gray-300 text-sm">
+                                        {t.pages.contest.prizesTable.rows.map((row, index) => (
+                                            <tr key={index} className={`border-b border-white/10 last:border-0 hover:bg-white/5 transition-colors ${row.highlight ? 'bg-white/5' : ''}`}>
+                                                <td className="py-4 px-6 font-bold text-white whitespace-nowrap">{row.prize}</td>
+                                                <td className="py-4 px-6 text-[#E8D860] font-bold whitespace-nowrap">{row.amount}</td>
+                                                <td className="py-4 px-6 leading-relaxed">{row.benefits}</td>
+                                            </tr>
+                                        ))}
+                                    </tbody>
+                                </table>
+                            </div>
                         </div>
 
                         {/* Copyright */}
-                        <div className="space-y-4">
+                        <div className="space-y-4 max-w-3xl mx-auto text-center">
                             <h3 className="text-xl font-bold text-[#E8D860] uppercase tracking-widest">{t.pages.contest.copyrightTitle}</h3>
-                            <div className="bg-white/5 p-6 rounded-xl border border-white/5 text-sm text-gray-400 leading-relaxed text-justify">
+                            <p className="text-sm text-gray-400 leading-relaxed">
                                 {t.pages.contest.copyrightText}
-                            </div>
+                            </p>
                         </div>
                     </div>
-
                 </div>
             </div>
         </section>

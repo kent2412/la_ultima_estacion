@@ -6,11 +6,8 @@ import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function ContactSection() {
-    const { language, setLanguage, t } = useLanguage();
+    const { language, t } = useLanguage();
 
-    const toggleLanguage = () => {
-        setLanguage(language === 'en' ? 'es' : 'en');
-    };
     return (
         <section className="bg-transparent py-24 px-6 md:px-12 bg-footer">
             <div className="container mx-auto flex flex-col md:flex-row gap-12 justify-between">
@@ -19,19 +16,7 @@ export default function ContactSection() {
                 <div className="w-full md:w-1/3 space-y-6">
                     <div className="flex justify-between items-center">
                         <h2 className="text-4xl font-bold text-white">{t.contact.title}</h2>
-                        <button
-                            onClick={toggleLanguage}
-                            className="text-xs font-bold bg-[#E8D860] text-black px-3 py-1 rounded hover:bg-[#D4C46C] transition-colors"
-                        >
-                            {language === 'en' ? 'ES' : 'EN'}
-                        </button>
                     </div>
-
-                    <p className="text-sm text-gray-300 max-w-xs">
-                        {language === 'en'
-                            ? "Help us give voice to the 53 million invisible caregivers.\n\n100% tax-deductible | Fractured Atlas"
-                            : "Ayúdanos a dar voz a los 53 millones de cuidadores invisibles.\n\n100% deducible de impuestos | Fractured Atlas"}
-                    </p>
 
                     <div className="space-y-4 pt-4">
                         <div className="flex items-center gap-3">
@@ -58,6 +43,12 @@ export default function ContactSection() {
                 {/* Support Ticket Section */}
                 <div className="w-full md:w-1/2 flex flex-col items-center md:items-start space-y-6">
                     <h3 className="text-2xl font-serif italic text-white">{t.contact.supportTitle}</h3>
+
+                    <p className="text-sm text-gray-300 max-w-xs">
+                        {language === 'en'
+                            ? "Help us give voice to the 53 million invisible caregivers.\n\n100% tax-deductible | Fractured Atlas"
+                            : "Ayúdanos a dar voz a los 53 millones de cuidadores invisibles.\n\n100% deducible de impuestos | Fractured Atlas"}
+                    </p>
 
                     {/* Ticket Image Link */}
                     <Link href="https://fundraising.fracturedatlas.org/la-ultima-estacion-the-last-station" target="_blank" className="relative w-full max-w-md h-48 transition-transform hover:scale-105 block">

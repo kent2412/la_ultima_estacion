@@ -56,7 +56,7 @@ export default function JurySection() {
     return (
         <section className="bg-transparent py-20 px-6">
             <div className="container mx-auto">
-                <h2 className="text-4xl font-bold text-white text-center mb-16">Jurado</h2>
+                <h2 className="text-4xl font-bold text-white text-center mb-16">{t.pages.contest.juryTitle}</h2>
 
                 <div
                     className="relative group/carousel px-4 md:px-12"

@@ -9,7 +9,7 @@ import { useLanguage } from "@/context/LanguageContext";
 import Image from "next/image";
 
 export default function Navbar() {
-    const { t, language } = useLanguage();
+    const { t, language, setLanguage } = useLanguage();
     const [isOpen, setIsOpen] = useState(false);
 
     const links = [
@@ -48,6 +48,12 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
+                    <button
+                        onClick={() => setLanguage(language === 'en' ? 'es' : 'en')}
+                        className="text-[10px] sm:text-xs font-bold bg-[#E8D860] text-black px-2 py-1 rounded hover:bg-[#D4C46C] transition-colors ml-2"
+                    >
+                        {language === 'en' ? 'ES' : 'EN'}
+                    </button>
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -80,6 +86,17 @@ export default function Navbar() {
                             {link.name}
                         </Link>
                     ))}
+                    <button
+                        onClick={() => {
+                            setLanguage(language === 'en' ? 'es' : 'en');
+                            setIsOpen(false);
+                        }}
+                        className={`text-left border-b border-gray-300 pb-2 hover:text-[#B05D30] transition-all duration-300 delay-[${links.length * 50}ms] ${isOpen ? "translate-x-0 opacity-100" : "-translate-x-4 opacity-0"
+                            }`}
+                        style={{ transitionDelay: `${links.length * 50}ms` }}
+                    >
+                        {language === 'en' ? 'Español' : 'English'}
+                    </button>
                 </div>
             </div>
         </>
