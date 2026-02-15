@@ -34,7 +34,7 @@ export default function Hero({ title, variant = "default", className }: HeroProp
 
             {/* Content */}
             <div className="relative z-10 container mx-auto px-6 md:px-12">
-                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter text-white font-copperplate w-full md:w-[60%]">
+                <h1 className="text-4xl md:text-6xl font-bold tracking-tighter font-copperplate w-full md:w-[60%] text-[#E8D860]">
                     {title}
                 </h1>
             </div>

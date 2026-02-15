@@ -19,17 +19,24 @@ export default function VideoModal({ isOpen, onClose, videoUrl }: VideoModalProp
             if (videoUrl.includes("v=")) {
                 id = videoUrl.split("v=")[1].split("&")[0];
             }
+            // Handle YouTube playlists
+            else if (videoUrl.includes("list=")) {
+                const listId = videoUrl.split("list=")[1].split("&")[0];
+                id = `?listType=playlist&list=${listId}`;
+            }
             // Handle truncated youtu.be URLs
             else if (videoUrl.includes("youtu.be/")) {
                 id = videoUrl.split("youtu.be/")[1];
             }
-            // Handle existing embed URLs (just strip query params if needed, or leave as is)
+            // Handle existing embed URLs
             else if (videoUrl.includes("embed/")) {
                 id = videoUrl.split("embed/")[1].split("?")[0];
             }
 
             if (id) {
-                setEmbedUrl(`https://www.youtube.com/embed/${id}?autoplay=1`);
+                const separator = id.includes("?") ? "&" : "?";
+                const baseUrl = id.startsWith("?") ? "https://www.youtube.com/embed" : "https://www.youtube.com/embed/";
+                setEmbedUrl(`${baseUrl}${id}${separator}autoplay=1`);
             } else {
                 // Fallback for non-YouTube or already correct URLs
                 setEmbedUrl(videoUrl);

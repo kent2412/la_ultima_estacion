@@ -74,15 +74,16 @@ export interface Dictionary {
                     format: string[];
                     email: string;
                     emailNote: string;
-                    techTitle: string;
-                    videoTitle: string;
-                    video: string[];
-                    audioTitle: string;
-                    audio: string[];
-                    contentTitle: string;
-                    content: string[];
-                    privacyTitle: string;
-                    privacy: string[];
+                    podcastHeadline: string;
+                    podcastIntroPre: string;
+                    podcastQuestions: string[];
+                    podcastTruth: string;
+                    podcastNoList: string[];
+                    podcastBottomDesc: string;
+                    podcastDetails: { label: string; value: string; }[];
+                    podcastCtaTitle: string;
+                    podcastCtaText: string;
+                    podcastCtaSubtext: string;
                 };
             };
             cast: {
@@ -128,6 +129,11 @@ export interface Dictionary {
                     // Let's make it a list of label strings for the email body recommendation.
                     fields: string[];
                     email: string; // The email address
+                };
+                announcement: {
+                    text1: string;
+                    text2: string;
+                    follow: string;
                 };
             };
             history: {
@@ -177,6 +183,7 @@ export interface Dictionary {
                 title: string;
                 subtitle: string;
                 firstItemsTitle: string;
+                comingSoonLabel: string;
                 firstItems: { title: string; desc: string; }[];
 
 
@@ -213,11 +220,11 @@ export interface Dictionary {
                         };
                         podcasts: {
                             title: string;
-                            items: { name: string; desc: string; link?: string; platform?: string; }[];
+                            items: { name: string; desc: string; link?: string; platform?: string; author?: string; }[];
                         };
                         apps: {
                             title: string;
-                            items: { name: string; desc: string; }[];
+                            items: { name: string; desc: string; link?: string; }[];
                         };
                     };
                 };
@@ -310,15 +317,17 @@ export interface Dictionary {
                     format: string[];
                     email: string;
                     emailNote: string;
-                    techTitle: string;
-                    videoTitle: string;
-                    video: string[];
-                    audioTitle: string;
-                    audio: string[];
-                    contentTitle: string;
-                    content: string[];
-                    privacyTitle: string;
-                    privacy: string[];
+
+                    podcastHeadline: string;
+                    podcastIntroPre: string;
+                    podcastQuestions: string[];
+                    podcastTruth: string;
+                    podcastNoList: string[];
+                    podcastBottomDesc: string;
+                    podcastDetails: { label: string; value: string; }[];
+                    podcastCtaTitle: string;
+                    podcastCtaText: string;
+                    podcastCtaSubtext: string;
                 };
             };
             cast: {
@@ -362,6 +371,11 @@ export interface Dictionary {
                     fieldsTitle: string;
                     fields: string[];
                     email: string;
+                };
+                announcement: {
+                    text1: string;
+                    text2: string;
+                    follow: string;
                 };
             };
             history: {
@@ -411,6 +425,7 @@ export interface Dictionary {
                 title: string;
                 subtitle: string;
                 firstItemsTitle: string;
+                comingSoonLabel: string;
                 firstItems: { title: string; desc: string; }[];
 
 
@@ -447,11 +462,11 @@ export interface Dictionary {
                         };
                         podcasts: {
                             title: string;
-                            items: { name: string; desc: string; link?: string; platform?: string; }[];
+                            items: { name: string; desc: string; link?: string; platform?: string; author?: string; }[];
                         };
                         apps: {
                             title: string;
-                            items: { name: string; desc: string; }[];
+                            items: { name: string; desc: string; link?: string; }[];
                         };
                     };
                 };
@@ -561,43 +576,41 @@ export const dictionary: Dictionary = {
                         "What you needed to hear when you needed it most",
                         "A message for other caregivers who are on the path"
                     ],
-                    formatTitle: "Suggested format:",
+                    formatTitle: "Video Format",
                     format: [
-                        "Duration: 2-5 minutes",
-                        "Horizontal or vertical (as you prefer)",
-                        "Speak directly to camera or record voice-over",
+                        "Length: 60–90 seconds",
+                        "Format: Horizontal (preferred)",
+                        "Framing: Keep your face centered in the frame",
+                        "Presentation: Speak directly to the camera or record a voice-over",
                         "Language: Spanish or English",
-                        "No professional equipment needed—your phone is enough"
+                        "Equipment: No professional equipment needed — your phone is enough"
                     ],
                     email: "Send your testimony to: testimonios@laultimaestacionfilm.com",
                     emailNote: "(Your story can be anonymous if you prefer. We will edit and publish with your approval.)",
-                    techTitle: "TECHNICAL REQUIREMENTS",
-                    videoTitle: "For video:",
-                    video: [
-                        "Format: MP4, MOV or similar",
-                        "Good lighting (natural light works perfectly)",
-                        "Clear audio (avoid places with lots of echo or background noise)",
-                        "Framing: Your face visible and centered (if you choose to show yourself)"
+
+                    podcastHeadline: "A podcast about family caregiving, unfiltered",
+                    podcastIntroPre: "Family caregiving doesn’t come with an instruction manual. It also doesn’t give permission to ask the uncomfortable questions:",
+                    podcastQuestions: [
+                        "Can I be angry at someone I love?",
+                        "Is it normal to wish it would all end?",
+                        "How do I reconcile guilt with exhaustion?"
                     ],
-                    audioTitle: "For audio/podcast:",
-                    audio: [
-                        "Format: MP3 or WAV",
-                        "Record in a quiet place",
-                        "Speak calmly, unhurried"
+                    podcastTruth: "Voces del Andén is a space for conversations that are rarely had in public.",
+                    podcastNoList: [
+                        "No toxic positivity.",
+                        "No unsolicited advice.",
+                        "Just truth."
                     ],
-                    contentTitle: "Recommended content:",
-                    content: [
-                        "Introduce yourself briefly (name, relationship to caregiving)",
-                        "Share your story: Who did you care for? For how long?",
-                        "Reflect: What did you learn? What did you need to hear?",
-                        "Close with a message for other caregivers"
+                    podcastBottomDesc: "A podcast that opens the floor to caregivers, experts, and real voices, to talk about love, fatigue, loss, and the dignity of caring—even when no one is watching.",
+                    podcastDetails: [
+                        { label: "Format:", value: "Season 1 · 10 episodes" },
+                        { label: "Hosted by:", value: "Jackie Zambrano" },
+                        { label: "Available on:", value: "YouTube" },
+                        { label: "Launch:", value: "May 2026" }
                     ],
-                    privacyTitle: "Privacy:",
-                    privacy: [
-                        "Don't share sensitive medical information without consent",
-                        "You can use a pseudonym if you prefer anonymity",
-                        "We'll review your video before publishing and ask for authorization"
-                    ]
+                    podcastCtaTitle: "Want to participate in the podcast?",
+                    podcastCtaText: "Email us at vocesdelanden@laultimaestacionfilm.com",
+                    podcastCtaSubtext: "Tell us briefly your story and why you would like to be part of Voces del Andén."
                 }
             },
             cast: {
@@ -611,14 +624,14 @@ export const dictionary: Dictionary = {
                 pressMediaLabel: "Press and Media:",
                 email: "prensa@laultimaestacionfilm.com",
                 phoneLabel: "Phone:",
-                phone: "+1 (518) 512-7243",
+                phone: "+1-(786) 356-1385",
                 producerLabel: "Executive Producer:",
                 producerName: "Jackie Zambrano",
                 producerEmail: "jaz@jackiezambrano.com",
                 contactAddress: "Miami, FL",
 
                 dossierTitle: "Electronic Press Kit (EPK)",
-                epkAvailable: "Available: February 2026",
+                epkAvailable: "Available: April 2026",
                 dossierText: "Press materials and media coverage. Every story deserves to be told. Find here everything needed to share The Last Station with your audience.\n\nThe press kit will include:",
                 epkIncludes: [
                     "Short and extended synopsis in Spanish and English",
@@ -631,9 +644,9 @@ export const dictionary: Dictionary = {
                 ],
 
                 buttons: {
-                    pdf: "[PDF Complete] Available February 2026",
-                    flyer: "[Flyer] Available February 2026",
-                    poster: "[Poster] Available February 2026",
+                    pdf: "[PDF Complete] Available April 2026",
+                    flyer: "[Flyer] Available April 2026",
+                    poster: "[Poster] Available April 2026",
                 },
 
                 notesTitle: "Press Notes and Articles",
@@ -664,6 +677,11 @@ export const dictionary: Dictionary = {
                     ],
                     email: "info@laultimaestacionfilm.com"
                 },
+                announcement: {
+                    text1: "Screenings of The Last Station will be announced as they are scheduled.",
+                    text2: "Starting in June 2026, we will share confirmed dates and venues so you can know when the film will arrive in your city or community.",
+                    follow: "Follow us or subscribe to receive upcoming screening dates."
+                }
             },
             history: {
                 title: "The Journey - Last Station",
@@ -755,9 +773,10 @@ export const dictionary: Dictionary = {
                 }
             },
             shop: {
-                title: "Take your souvenir + Gear up for your journey",
-                subtitle: "Coming soon. Products available starting May 2026",
+                title: "Platform Souvenirs",
+                subtitle: "Take with you a story that honors caregivers.\nAvailable starting May 2026.",
                 firstItemsTitle: "First items will include:",
+                comingSoonLabel: "Coming May 2026",
                 firstItems: [
                     { title: "Anthology “Stories from the Platform”", desc: "Finalist stories from the literary contest | Limited physical edition" },
                     { title: "Official Short Film Poster", desc: "Exclusive design | High-quality print" },
@@ -784,67 +803,60 @@ export const dictionary: Dictionary = {
 
                 library: {
                     title: "LIBRARY – RESOURCES FOR CAREGIVERS",
-                    subtitle: "Books for the Journey",
-                    intro: "As just as you take a book borrowed for your journey, here you will find selected resources on family caregiving.", // "As you take a book..." corrected slightly to match Spanish flow better or user prompt "As just as you take... wait user said 'As you take a book borrowed...' in English text provided? No, user provided 'As just as you take a book borrowed...'" - actually the user prompt says "As just as you take a book borrowed for your journey..." in the English section. I'll stick to that or clean it up? "As you borrow a book..." sounds better. User prompt: "As thus as you take a book borrowed..." wait, let me check the prompt again.
-                    // User prompt EN: "Books for the Journey. Selected resources on family caregiving." 
-                    // User prompt ES: "Así como tomas un libro prestado para tu viaje..."
-                    // The English text in the prompt is: "As just as you take a book borrowed for your journey..." - Wait, I don't see that exact phrase in the English section of the prompt.
-                    // Prompt EN: "Books for the Journey\nSelected resources on family caregiving."
-                    // Prompt ES: "Libros para el Viaje\nAsí como tomas un libro prestado para tu viaje..."
-                    // I will translate the Spanish intro for English since the user didn't provide a full translation for that specific sentence in the English block (or it was brief).
-                    // "Just as you borrow a book for your journey, here you will find selected resources on family caregiving."
+                    subtitle: "Resources for the Journey",
+                    intro: "Just as you might borrow a book to accompany you along the way, here you’ll find links to organizations, books, and podcasts carefully selected to support family caregiving.",
 
                     categories: {
                         support: {
-                            title: "Support Organizations (Resources in Spanish)",
+                            title: "Caregiving Support & Information",
                             items: [
-                                { name: "CuidaMiSalud (AARP in Spanish)", desc: "Resource center, tools, and free support for Latino family caregivers. Includes guides, articles, and videos in Spanish.", link: "https://www.aarp.org/espanol/cuidado/" },
-                                { name: "Family Caregiver Alliance – Spanish Resources", desc: "Fact sheets, practical guides, and resources on specific diseases, all available in Spanish.", link: "https://www.caregiver.org/spanish/" },
-                                { name: "CareOutLoud", desc: "Digital community specifically dedicated to Latino caregivers, with resources in Spanish, real stories, and culturally relevant support.", link: "https://careoutloud.org" },
-                                { name: "Alzheimer’s Association in Spanish", desc: "Resources, support, and 24/7 helpline in Spanish for families affected by Alzheimer's and dementia.", link: "https://www.alz.org/espanol", phone: "1-800-272-3900" },
-                                { name: "Easter Seals South Florida", desc: "Local services for people with disabilities in South Florida, including resources and support for caregivers in Spanish.", link: "https://www.easterseals.com/southflorida/" },
-                                { name: "National Institute on Aging (NIA) – Spanish", desc: "Information in Spanish on health, aging, and caregiver resources from the federal government.", link: "https://www.nia.nih.gov/espanol" }
+                                { name: "AARP – Caregiving", desc: "Resources, tools, and support for family caregivers.", link: "https://www.aarp.org/caregiving/" },
+                                { name: "Family Caregiver Alliance", desc: "Information, education, services, and advocacy for family caregivers.", link: "https://www.caregiver.org/" },
+                                { name: "Caregiver Action Network (CAN)", desc: "Peer support, educational resources, and information for family caregivers.", link: "https://www.caregiveraction.org/" },
+                                { name: "Alzheimer’s Association", desc: "Leading voluntary health organization in Alzheimer's care, support and research. Helpline (24/7): 1-800-272-3900", link: "https://www.alz.org/" },
+                                { name: "Easterseals", desc: "Provides services, education, outreach, and advocacy for people with disabilities and their families.", link: "https://www.easterseals.com/" },
+                                { name: "National Institute on Aging (NIA)", desc: "Government resource for aging research and health information for caregivers.", link: "https://www.nia.nih.gov/health/caregiving" }
                             ]
                         },
                         legal: {
-                            title: "Legal and Financial Resources",
+                            title: "Legal & Financial Resources",
                             items: [
-                                { name: "Medicare in Spanish", desc: "Official information in Spanish on Medicare coverage, benefits, and support programs for caregivers.", link: "https://es.medicare.gov", phone: "1-800-633-4227" },
-                                { name: "Benefits CheckUp (Spanish)", desc: "Free tool to find programs that help pay for medications, health care, and other expenses.", link: "https://www.benefitscheckup.org" },
-                                { name: "Social Security – Spanish", desc: "Resources in Spanish on Social Security benefits, Medicare, and assistance programs.", link: "https://www.ssa.gov/espanol/", phone: "1-800-772-1213" }
+                                { name: "Medicare (Official U.S. Government Site)", desc: "Information on Medicare coverage, benefits, and support. Helpline: 1-800-633-4227", link: "https://www.medicare.gov/" },
+                                { name: "BenefitsCheckUp", desc: "A free service of the National Council on Aging to find benefit programs.", link: "https://www.benefitscheckup.org/" },
+                                { name: "Social Security Administration", desc: "Official site for Social Security information and services. Helpline: 1-800-772-1213", link: "https://www.ssa.gov/" }
                             ]
                         },
                         community: {
-                            title: "Online Communities and Support",
+                            title: "Online Communities & Support",
                             items: [
-                                { name: "CareOutLoud", desc: "Digital community for Latino caregivers with real stories, resources, and support in Spanish.", link: "https://careoutloud.org" },
-                                { name: "Alzheimer’s Helpline (24/7 in Spanish)", desc: "Free, confidential telephone support available 24/7 in Spanish for caregivers.", link: "https://www.alz.org/es-mx/reciba-ayuda-en-espanol", phone: "1-800-272-3900" },
-                                { name: "AARP Virtual Support Groups", desc: "Online support groups for Hispanic caregivers sharing similar experiences.", link: "https://www.aarp.org/espanol/cuidado/grupos-apoyo/" }
+                                { name: "Caregiving.com", desc: "A community of caregivers sharing their stories and support.", link: "https://www.caregiving.com/" },
+                                { name: "Alzheimer’s Association – Online Community", desc: "Connect with other caregivers through the ALZConnected message boards.", link: "https://www.alzconnected.org/" }
                             ]
                         },
                         literature: {
-                            title: "Recommended Literature (Available in Spanish)",
+                            title: "Recommended Reading (Publishers / Official Pages)",
                             items: [
-                                { name: "Cuando el Ser Amado Tiene Demencia", author: "Susan McCurry", desc: "Practical guide for families caring for people with Alzheimer's and dementia. Available in Spanish." },
-                                { name: "El Cuidador de un Ser Querido con Alzheimer", author: "AARP", desc: "Complete free guide in Spanish with practical tips for caregivers.", link: "https://www.aarp.org" }, // Link implied "Download free at..."
-                                { name: "Manual para el Cuidado de Personas Mayores Dependientes", author: "IMSERSO (Spain)", desc: "Comprehensive resource on care for the elderly, caregiver self-care, and available resources." },
-                                { name: "Cuidar Mejor: Guía para las Personas Cuidadoras", author: "Spanish Red Cross", desc: "Practical guide on physical, emotional, and social aspects of caregiving." },
-                                { name: "El Día de 36 Horas", author: "Nancy L. Mace & Peter V. Rabins", desc: "Spanish version of the essential guide for families caring for people with Alzheimer's and dementia." }
+                                { name: "The 36-Hour Day", author: "Nancy L. Mace & Peter V. Rabins", desc: "A family guide to caring for people who have Alzheimer disease and other dementias.", link: "https://www.press.jhu.edu/books/title/54015/36-hour-day" },
+                                { name: "Being Mortal", author: "Atul Gawande", desc: "Medicine and What Matters in the End.", link: "https://atulgawande.com/book/being-mortal/" },
+                                { name: "The Caregiver’s Companion", author: "Carolyn A. Brent", desc: "A guide for family caregivers." },
+                                { name: "When the Time Comes", author: "Paula Span", desc: "Choices at the end of life.", link: "https://paulaspan.com/books/" }
                             ]
                         },
                         podcasts: {
-                            title: "Podcasts in Spanish about Caregiving",
+                            title: "Podcasts About Caregiving",
                             items: [
-                                { name: "“Cuidadores y Cuidadoras”", platform: "Spotify", desc: "Podcast dedicated to sharing experiences and advice for those who care." },
-                                { name: "“Hablemos de Alzheimer”", platform: "Alzheimer’s Association", desc: "Podcast series in Spanish about caring for people with dementia." }
+                                { name: "The Caregiver Story", desc: "Real stories from caregivers to inspire and support.", link: "https://caringkindnyc.org/podcast/" },
+                                { name: "Caregiving Club On Air", desc: "Interviews and expert advice for caregivers.", link: "https://www.youtube.com/@caregivingclub" },
+                                { name: "Untangling Alzheimer’s", desc: "Insights and stories about Alzheimer's care.", link: "https://alzauthors.com/podcast/" },
+                                { name: "Best 10 Podcasts for Family Caregivers", desc: "A curated list of podcasts specifically for caregivers.", link: "https://www.caregiveroc.org/post/10-of-the-best-podcasts-for-family-caregivers" }
                             ]
                         },
                         apps: {
-                            title: "Useful Mobile Apps (Spanish available)",
+                            title: "Helpful Mobile Apps",
                             items: [
-                                { name: "CareZone", desc: "Organizes medications, medical appointments, and coordinates with other family members. Available in Spanish." },
-                                { name: "Medisafe", desc: "Medication reminders with Spanish interface." },
-                                { name: "MedicineWise (MedWise)", desc: "Medication tracking and reminders in Spanish." }
+                                { name: "CareZone", desc: "Organize medications, appointments, and family coordination.", link: "https://www.carezone.com/" },
+                                { name: "Medisafe", desc: "Medication management and pill reminder app.", link: "https://www.medisafe.com/" },
+                                { name: "LotsAHelpingHands", desc: "Create a community to coordinate help for a loved one.", link: "https://lotsahelpinghands.com/" }
                             ]
                         }
                     }
@@ -1028,43 +1040,41 @@ export const dictionary: Dictionary = {
                         "Qué querías escuchar cuando más lo necesitabas",
                         "Un mensaje para otros cuidadores que están en el camino"
                     ],
-                    formatTitle: "Formato sugerido:",
+                    formatTitle: "Formato del video",
                     format: [
-                        "Duración: 2-5 minutos",
-                        "Horizontal o vertical (como prefieras)",
-                        "Habla directamente a cámara o graba tu voz en off",
+                        "Duración: 60–90 segundos",
+                        "Formato: Horizontal (preferible)",
+                        "Encuadre: Coloca tu rostro centrado en la imagen",
+                        "Presentación: Habla directamente a cámara o graba tu voz en off",
                         "Idioma: Español o inglés",
-                        "No necesitas equipo profesional—tu teléfono es suficiente"
+                        "Equipo: No necesitas equipo profesional — tu teléfono es suficiente"
                     ],
                     email: "Envía tu testimonio a: testimonios@laultimaestacionfilm.com",
                     emailNote: "(Tu historia puede ser anónima si lo prefieres. Nosotros editaremos y publicaremos con tu aprobación.)",
-                    techTitle: "REQUISITOS TÉCNICOS",
-                    videoTitle: "Para video:",
-                    video: [
-                        "Formato: MP4, MOV o similar",
-                        "Buena iluminación (luz natural funciona perfecto)",
-                        "Audio claro (evita lugares con mucho eco o ruido de fondo)",
-                        "Encuadre: Tu rostro visible y centrado (si decides mostrarte)"
+
+                    podcastHeadline: "El podcast sobre el cuidado familiar sin filtros",
+                    podcastIntroPre: "El cuidado familiar no viene con un manual de instrucciones. Tampoco con permiso para hacer las preguntas incómodas:",
+                    podcastQuestions: [
+                        "¿Puedo estar enojada con alguien a quien amo?",
+                        "¿Es normal desear que todo termine?",
+                        "¿Cómo se reconcilia la culpa con el agotamiento?"
                     ],
-                    audioTitle: "Para audio/podcast:",
-                    audio: [
-                        "Formato: MP3 o WAV",
-                        "Graba en un lugar silencioso",
-                        "Habla con calma, sin prisa"
+                    podcastTruth: "Voces del Andén es un espacio para las conversaciones que casi nunca se tienen en público.",
+                    podcastNoList: [
+                        "Sin positivismo tóxico.",
+                        "Sin consejos no solicitados.",
+                        "Solo verdad."
                     ],
-                    contentTitle: "Contenido recomendado:",
-                    content: [
-                        "Preséntate brevemente (nombre, relación con el cuidado)",
-                        "Comparte tu historia: ¿A quién cuidaste? ¿Durante cuánto tiempo?",
-                        "Reflexiona: ¿Qué aprendiste? ¿Qué necesitabas escuchar?",
-                        "Cierra con un mensaje para otros cuidadores"
+                    podcastBottomDesc: "Un podcast que abre la palabra a cuidadores, expertos y voces reales, para hablar del amor, el cansancio, la pérdida y la dignidad de cuidar… incluso cuando nadie está mirando.",
+                    podcastDetails: [
+                        { label: "Formato:", value: "Temporada 1 · 10 episodios" },
+                        { label: "Conducción:", value: "Jackie Zambrano" },
+                        { label: "Disponible en:", value: "YouTube" },
+                        { label: "Lanzamiento:", value: "Mayo 2026" }
                     ],
-                    privacyTitle: "Privacidad:",
-                    privacy: [
-                        "No compartas información médica sensible sin consentimiento",
-                        "Puedes usar seudónimo si prefieres el anonimato",
-                        "Revisaremos tu video antes de publicarlo y te pediremos autorización"
-                    ]
+                    podcastCtaTitle: "¿Quieres participar en el podcast?",
+                    podcastCtaText: "Escríbenos a vocesdelanden@laultimaestacionfilm.com",
+                    podcastCtaSubtext: "Cuéntanos brevemente tu historia y por qué te gustaría ser parte de Voces del Andén."
                 }
             },
             cast: {
@@ -1078,14 +1088,14 @@ export const dictionary: Dictionary = {
                 pressMediaLabel: "Prensa y Medios:",
                 email: "prensa@laultimaestacion.com", // Keeping strictly as requested for Spanish even if different domain
                 phoneLabel: "Teléfono:",
-                phone: "+1 (518) 512-7243",
+                phone: "+1-(786) 356-1385",
                 producerLabel: "Productora Ejecutiva:",
                 producerName: "Jackie Zambrano",
                 producerEmail: "jaz@jackiezambrano.com",
                 contactAddress: "Miami, FL",
 
                 dossierTitle: "Dosier de Prensa Electrónico (EPK)",
-                epkAvailable: "Disponible: Febrero 2026",
+                epkAvailable: "Disponible: Abril 2026",
                 dossierText: "Material de prensa y cobertura mediática. Cada historia merece ser contada. Encuentra aquí todo lo necesario para compartir La Última Estación con tu audiencia.\n\nEl press kit incluirá:",
                 epkIncludes: [
                     "Sinopsis (corta y extendida) en español e inglés",
@@ -1098,9 +1108,9 @@ export const dictionary: Dictionary = {
                 ],
 
                 buttons: {
-                    pdf: "[PDF Completo] Disponible febrero 2026",
-                    flyer: "[Flyer] Disponible febrero 2026",
-                    poster: "[Poster] Disponible febrero 2026",
+                    pdf: "[PDF Completo] Disponible Abril 2026",
+                    flyer: "[Flyer] Disponible Abril 2026",
+                    poster: "[Poster] Disponible Abril 2026",
                 },
 
                 notesTitle: "Notas de Prensa y Artículos",
@@ -1131,6 +1141,11 @@ export const dictionary: Dictionary = {
                     ],
                     email: "info@laultimaestacionfilm.com"
                 },
+                announcement: {
+                    text1: "Las proyecciones de La Última Estación se irán anunciando a medida que se programen.",
+                    text2: "A partir de junio de 2026, compartiremos las fechas y sedes confirmadas para que conozcas cuándo la película llegará a tu ciudad o comunidad.",
+                    follow: "Síguenos o suscríbete para recibir las próximas fechas de proyección."
+                }
             },
             history: {
                 title: "El Trayecto - La Última Estación",
@@ -1222,9 +1237,10 @@ export const dictionary: Dictionary = {
                 }
             },
             shop: {
-                title: "Lleva tu Souvenir + Equípate para tu Viaje",
-                subtitle: "Próximamente. Productos disponibles a partir de mayo 2026",
+                title: "Souvenirs del Andén",
+                subtitle: "Lleva contigo una historia que honra a los cuidadores.\nDisponible a partir de mayo 2026.",
                 firstItemsTitle: "Los primeros artículos incluirán:",
+                comingSoonLabel: "Disponible Mayo 2026",
                 firstItems: [
                     { title: "Antología 'Historias de Andén'", desc: "Relatos finalistas del concurso literario | Edición física limitada" },
                     { title: "Póster Oficial del Cortometraje", desc: "Diseño exclusivo | Impresión de alta calidad" },
@@ -1250,19 +1266,16 @@ export const dictionary: Dictionary = {
 
                 library: {
                     title: "BIBLIOTECA - RECURSOS PARA CUIDADORES",
-                    subtitle: "Libros para el Viaje",
-                    intro: "Así como tomas un libro prestado para tu viaje, aquí encontrarás recursos seleccionados sobre cuidado familiar.",
+                    subtitle: "Recursos para el viaje",
+                    intro: "Así como tomas un libro prestado para acompañarte en el camino, aquí encontrarás enlaces a organizaciones, libros y podcasts cuidadosamente seleccionados para apoyar el cuidado familiar.",
 
                     categories: {
                         support: {
-                            title: "Organizaciones de Apoyo (Recursos en Español)",
+                            title: "Plataformas de Formación y Apoyo para Cuidadores",
                             items: [
-                                { name: "CuidaMiSalud (AARP en Español)", desc: "Centro de recursos, herramientas y apoyo gratuito para cuidadores familiares latinos. Incluye guías, artículos y videos en español.", link: "https://www.aarp.org/espanol/cuidado/" },
-                                { name: "Family Caregiver Alliance - Recursos en Español", desc: "Hojas informativas, guías prácticas y recursos sobre enfermedades específicas, todo disponible en español.", link: "https://www.caregiver.org/spanish/" },
-                                { name: "CareOutLoud", desc: "Comunidad digital dedicada específicamente a cuidadores latinos, con recursos en español, historias reales y apoyo culturalmente relevante.", link: "https://careoutloud.org" },
-                                { name: "Alzheimer's Association en Español", desc: "Recursos, apoyo y línea de ayuda 24/7 en español para familias afectadas por Alzheimer y demencias.", link: "https://www.alz.org/espanol", phone: "1-800-272-3900" },
-                                { name: "Easter Seals South Florida", desc: "Servicios locales para personas con discapacidades en el sur de Florida, incluyendo recursos y apoyo para cuidadores en español.", link: "https://www.easterseals.com/southflorida/" },
-                                { name: "Instituto Nacional sobre el Envejecimiento (NIA)", desc: "Información en español sobre salud, envejecimiento y recursos para cuidadores del gobierno federal.", link: "https://www.nia.nih.gov/espanol" }
+                                { name: "Cuidadores saludables (Autocuidado)", desc: "Ver recomendaciones de salud del cuidador", link: "https://www.alz.org/es-mx/ayuda-y-apoyo/cuidado/salud-de-cuidadores/cuidadores-saludables" },
+                                { name: "Estrés del cuidador y prevención del agotamiento", desc: "Leer guía sobre estrés del cuidador", link: "https://www.alz.org/es-mx/ayuda-y-apoyo/cuidado/salud-de-cuidadores/estres-del-cuidador" },
+                                { name: "Programa SerCuidadorA (Cruz Roja)", desc: "Ofrece materiales, cursos, publicaciones e infografías para cuidadores no profesionales.", link: "https://www2.cruzroja.es/sercuidadora" }
                             ]
                         },
                         legal: {
@@ -1276,34 +1289,34 @@ export const dictionary: Dictionary = {
                         community: {
                             title: "Comunidades y Apoyo en Línea",
                             items: [
-                                { name: "CareOutLoud", desc: "Comunidad digital para cuidadores latinos con historias reales, recursos y apoyo en español.", link: "https://careoutloud.org" },
                                 { name: "Línea de Ayuda de Alzheimer's (24/7 en español)", desc: "Apoyo telefónico gratuito, confidencial y disponible 24/7 en español para cuidadores.", link: "https://www.alz.org/es-mx/reciba-ayuda-en-espanol", phone: "1-800-272-3900" },
                                 { name: "Grupos de Apoyo Virtuales de AARP", desc: "Grupos de apoyo en línea para cuidadores hispanos que comparten experiencias similares.", link: "https://www.aarp.org/espanol/cuidado/grupos-apoyo/" }
                             ]
                         },
                         literature: {
-                            title: "Literatura Recomendada (Disponible en Español)",
+                            title: "Literatura y Guías Recomendadas",
                             items: [
-                                { name: "Cuando el Ser Amado Tiene Demencia", author: "Susan McCurry", desc: "Guía práctica para familias que cuidan a personas con Alzheimer y demencia. Disponible en español." },
-                                { name: "El Cuidador de un Ser Querido con Alzheimer", author: "AARP", desc: "Guía completa gratuita en español con consejos prácticos para cuidadores.", link: "https://www.aarp.org" },
-                                { name: "Manual para el Cuidado de Personas Mayores Dependientes", author: "IMSERSO (España)", desc: "Recurso integral sobre cuidados a personas mayores, autocuidado del cuidador y recursos disponibles." },
-                                { name: "Cuidar Mejor: Guía para las Personas Cuidadoras", author: "Cruz Roja Española", desc: "Guía práctica sobre aspectos físicos, emocionales y sociales del cuidado." },
-                                { name: "El Día de 36 Horas", author: "Nancy L. Mace y Peter V. Rabins", desc: "Versión en español de la guía esencial para familias que cuidan a personas con Alzheimer y demencia." }
+                                { name: "Manual para cuidadores de personas con demencia", author: "Ministerio de Sanidad (España)", desc: "Acceder al manual oficial", link: "https://www.sanidad.gob.es/eu/areas/calidadAsistencial/estrategias/enfermedadesNeurodegenerativas/manualCuidadoresDemencia/home.htm" },
+                                { name: "Guía de cuidados — Cruz Roja (Programa SerCuidador)", desc: "Consultar la guía de cuidados", link: "https://www.cruzroja.es/ser-cuidador/Guia-cuidados.html" },
+                                { name: "Guía básica de recursos para cuidadoras y cuidadores", author: "Fundación Alzheimer España", desc: "Descargar la guía de recursos", link: "https://alzfae.org/guia-basica-de-recursos-para-cuidadoras-y-cuidadores-familiare/" },
+                                { name: "Guía de prevención de riesgos y adaptación del hogar", author: "Cruz Roja (Alzheimer Universal)", desc: "Descargar guía PDF", link: "https://alzheimeruniversal.eu/2014/04/17/cruz-roja-guia-de-prevencion-de-riesgos-y-adaptacion-de-espacios-para-cuidadores/" },
+                                { name: "MedlinePlus (NIH) — Cuidadores de personas con Alzheimer", desc: "Explorar recursos de Alzheimer para cuidadores", link: "https://medlineplus.gov/spanish/alzheimerscaregivers.html" },
+                                { name: "Alzheimer’s Association — Recursos para cuidadores", desc: "Centro de recursos para cuidadores (en español)", link: "https://www.alz.org/es-mx/ayuda-y-apoyo/cuidado" }
                             ]
                         },
                         podcasts: {
-                            title: "Podcasts en español sobre cuidado",
+                            title: "Podcast",
                             items: [
-                                { name: "“Cuidadores y Cuidadoras”", platform: "Spotify", desc: "Podcast dedicado a compartir experiencias y consejos para quienes cuidan." },
-                                { name: "“Hablemos de Alzheimer”", platform: "Alzheimer's Association", desc: "Serie de podcasts en español sobre el cuidado de personas con demencia." }
+                                { name: "Parkinson’s Foundation — Substantial Matters", platform: "Episodios en Español", desc: "Escuchar podcast sobre Parkinson", link: "https://www.parkinson.org/espanol/recursos-y-apoyo/podcast" },
+                                { name: "LACARE — Podcast sobre Alzheimer y Demencia", desc: "Escuchar podcast de LACARE", link: "https://lacareillinois.org/es/podcast/" },
+                                { name: "Cuidando desde el Corazón", author: "Barbie Torres", desc: "Escuchar en Apple Podcasts", link: "https://podcasts.apple.com/us/podcast/cuidando-desde-el-coraz%C3%B3n-porbarbie-torres/id1501703515" }
                             ]
                         },
                         apps: {
-                            title: "Aplicaciones Móviles Útiles (Español disponible)",
+                            title: "Apps Útiles",
                             items: [
-                                { name: "CareZone", desc: "Organiza medicamentos, citas médicas y coordina con otros miembros de la familia. Disponible en español." },
-                                { name: "Medisafe", desc: "Recordatorios de medicamentos con interfaz en español." },
-                                { name: "MedicineWise (MedWise)", desc: "Seguimiento de medicamentos y recordatorios en español." }
+                                { name: "CareZone", desc: "Organiza medicamentos, citas médicas y coordinación familiar.", link: "https://carezone.com" },
+                                { name: "Asistencia Domiciliaria para Cuidadores en Español", desc: "Software de cuidado en el hogar para cuidadores de habla hispana.", link: "https://www.ankota.com/home-care-software-for-spanish-speaking-caregivers" }
                             ]
                         }
                     }

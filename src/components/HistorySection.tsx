@@ -10,7 +10,7 @@ export default function HistorySection() {
     const { t } = useLanguage();
     const [isModalOpen, setIsModalOpen] = useState(false);
     // Placeholder URL found in code, keeping it for now but wiring up the modal
-    const videoUrl = "https://www.youtube.com/watch?v=S_WzHMxOu9g";
+    const videoUrl = "https://www.youtube.com/playlist?list=PLQRwPThFq4Ox3a1nu8sid8_0TDUGgWgjA";
 
     return (
         <section id="historia" className="bg-transparent text-[#ECEBE7] py-24 px-6 md:px-12 overflow-hidden">

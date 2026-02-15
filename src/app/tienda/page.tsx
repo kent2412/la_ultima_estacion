@@ -47,7 +47,7 @@ export default function TiendaPage() {
                         ))}
                         <div className="absolute inset-0 flex items-center justify-center">
                             <span className="bg-black/80 px-6 py-2 rounded-full text-[#E8D860] border border-[#E8D860] text-sm uppercase tracking-widest">
-                                Coming May 2026
+                                {t.pages.shop.comingSoonLabel}
                             </span>
                         </div>
                     </div>

@@ -27,6 +27,19 @@ export default function ProyeccionesPage() {
             
             */}
 
+            {/* Announcement Section */}
+            <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-8 border-b border-white/10">
+                <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
+                    {t.pages.screenings.announcement.text1}
+                </p>
+                <p className="text-xl md:text-2xl text-white/90 font-light leading-relaxed">
+                    {t.pages.screenings.announcement.text2}
+                </p>
+                <p className="text-xl md:text-2xl text-[#E8D860] font-medium leading-relaxed pt-4">
+                    {t.pages.screenings.announcement.follow}
+                </p>
+            </section>
+
             {/* Private Screening Request Section */}
             <section className="py-24 px-6 md:px-12 max-w-4xl mx-auto text-center space-y-12">
                 <div className="space-y-6">
