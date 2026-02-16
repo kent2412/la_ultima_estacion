@@ -153,6 +153,7 @@ export interface Dictionary {
                 title: string;
                 juryTitle: string;
                 openCallTitle: string;
+                openCallSubtitle: string;
                 openCallText: string;
                 scheduleTitle: string;
                 schedule: { date: string; event: string; }[];
@@ -401,6 +402,7 @@ export interface Dictionary {
                 title: string;
                 juryTitle: string;
                 openCallTitle: string;
+                openCallSubtitle: string;
                 openCallText: string;
                 scheduleTitle: string;
                 schedule: { date: string; event: string; }[];
@@ -711,8 +713,9 @@ export const dictionary: Dictionary = {
             contest: {
                 title: "Platform Stories",
                 juryTitle: "Jury",
-                openCallTitle: "Literary Contest 2026",
-                openCallText: "A podcast about family caregiving without filters",
+                openCallTitle: "PLATFORM STORIES",
+                openCallSubtitle: "Literary Contest 2026",
+                openCallText: "A tribute to unpaid caregivers who support, accompany, and love in silence.\n\nInspired by the short film The Last Station, this international contest invites us to give voice to those who care without recognition: family members, friends, neighbors who dedicate their time, energy, and love to caring for others.\n\nLike on train journeys, we want to hear what is said along the way—intimate, honest, human stories shared before moving on.",
                 scheduleTitle: "OFFICIAL TIMELINE – 2026 EDITION",
                 schedule: [
                     { date: "March 29, 2026", event: "Official Contest Launch" },
@@ -1181,8 +1184,9 @@ export const dictionary: Dictionary = {
             contest: {
                 title: "HISTORIAS DEL ANDÉN",
                 juryTitle: "Jurado",
-                openCallTitle: `Concurso Literario "Historias de Andén"`,
-                openCallText: "Concurso literario para cuidadores familiares",
+                openCallTitle: "HISTORIAS DEL ANDÉN",
+                openCallSubtitle: "Convocatoria Literaria 2026",
+                openCallText: "Un homenaje a los cuidadores no remunerados que sostienen, acompañan y aman en silencio.\n\nInspirado en el cortometraje La Última Estación, este concurso internacional invita a dar voz a quienes cuidan sin reconocimiento: familiares, amigos, vecinos que dedican su tiempo, energía y amor al cuidado de otros.\n\nComo en los viajes en tren, queremos escuchar lo que se dice en los trayectos—historias íntimas, honestas y humanas, compartidas antes de seguir camino.",
                 scheduleTitle: "CRONOGRAMA OFICIAL – EDICIÓN 2026",
                 schedule: [
                     { date: "29 de marzo de 2026", event: "Lanzamiento oficial del concurso" },

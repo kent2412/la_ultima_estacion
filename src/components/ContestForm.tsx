@@ -18,12 +18,19 @@ export default function ContestForm() {
 
                     {/* Header */}
                     <div className="space-y-6 text-center">
-                        <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-white font-copperplate drop-shadow-lg">
-                            {t.pages.contest.openCallTitle}
-                        </h2>
-                        <p className="text-lg leading-relaxed whitespace-pre-wrap text-gray-200 max-w-3xl mx-auto">
-                            {t.pages.contest.openCallText}
-                        </p>
+                        <div className="space-y-2">
+                            <h2 className="text-4xl md:text-6xl font-bold tracking-tight text-white font-copperplate drop-shadow-lg uppercase">
+                                {t.pages.contest.openCallTitle}
+                            </h2>
+                            <p className="text-2xl md:text-3xl font-bold text-[#E8D860] font-copperplate tracking-wide uppercase">
+                                {t.pages.contest.openCallSubtitle}
+                            </p>
+                        </div>
+                        <div className="max-w-4xl mx-auto space-y-4">
+                            <p className="text-lg md:text-xl leading-relaxed whitespace-pre-wrap text-gray-200">
+                                {t.pages.contest.openCallText}
+                            </p>
+                        </div>
                     </div>
 
                     <div className="w-full h-px bg-gradient-to-r from-transparent via-white/20 to-transparent" />
