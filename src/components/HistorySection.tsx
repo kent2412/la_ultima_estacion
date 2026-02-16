@@ -98,11 +98,22 @@ export default function HistorySection() {
                 </div>
 
                 {/* Video Vision */}
-                <div className="w-full flex justify-center">
-                    <VideoPlayer
-                        videoUrl={videoUrl}
-                        onPlay={() => setIsModalOpen(true)}
-                    />
+                <div className="space-y-12">
+                    <div className="max-w-4xl mx-auto text-center space-y-6 px-4">
+                        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-[#E5A85C] uppercase">
+                            {t.history.videoVoicesTitle}
+                        </h2>
+                        <p className="text-base md:text-lg leading-relaxed text-gray-300 whitespace-pre-wrap">
+                            {t.history.videoVoicesText}
+                        </p>
+                    </div>
+
+                    <div className="w-full flex justify-center">
+                        <VideoPlayer
+                            videoUrl={videoUrl}
+                            onPlay={() => setIsModalOpen(true)}
+                        />
+                    </div>
                 </div>
 
                 {/* La Inspiración */}

@@ -43,6 +43,9 @@ export interface Dictionary {
             visionText: string;
             galleryTitle: string;
             bloopersTitle: string;
+            videoVoicesTitle: string;
+            videoVoicesText: string;
+            videoVoicesLabel: string;
             invisibleReality: {
                 title: string;
                 stats: { value: string; label: string; }[];
@@ -59,6 +62,9 @@ export interface Dictionary {
             bitacora: {
                 title: string;
                 introTitle: string;
+                videoTitle: string;
+                videoSubtitle: string;
+                videoLabel: string;
                 podcastSection: {
                     intro: string;
                     questions: string[];
@@ -286,6 +292,9 @@ export interface Dictionary {
             visionText: string;
             galleryTitle: string;
             bloopersTitle: string;
+            videoVoicesTitle: string;
+            videoVoicesText: string;
+            videoVoicesLabel: string;
             invisibleReality: {
                 title: string;
                 stats: { value: string; label: string; }[];
@@ -302,6 +311,9 @@ export interface Dictionary {
             bitacora: {
                 title: string;
                 introTitle: string;
+                videoTitle: string;
+                videoSubtitle: string;
+                videoLabel: string;
                 podcastSection: {
                     intro: string;
                     questions: string[];
@@ -530,8 +542,11 @@ export const dictionary: Dictionary = {
             visionText: "The Last Station embraces the complexity of love and loss without gratuitous drama. Jessica, Annie, and John represent a temporal triangle where care is transmitted from woman to woman across time.\n\nThe train is a mobile confessional. Each station marks a stage of grief; each tunnel, an immersion in shared memory. The rhythm of the clack-clack on the rails marks Jessica's rebirth.\n\nVisually, the emotional palette evolves with her arc: from cold blues to warm golds. Annie's diary functions as a temporal bridge. The final fire ritual becomes alchemical transformation, not farewell.\n\nThis film breathes, proposes, honors silence as emotional language. With a cast that understands the difference between acting and truth, it will become a universal mirror.\n\nBecause we all inhabit this story without realizing it. And we deserve to see it reflected with dignity.",
             galleryTitle: "Gallery",
             bloopersTitle: "Bloopers",
+            videoVoicesTitle: "Voices Behind the Camera",
+            videoVoicesText: "Listen to director Eduardo Pardo and writer Jackie Zambrano discuss the creative vision, production process, and emotional heart of The Last Station",
+            videoVoicesLabel: "Creative Vision",
             invisibleReality: {
-                title: "THE INVISIBLE REALITY",
+                title: "The Invisible Reality",
                 stats: [
                     { value: "63 million", label: "Unpaid family caregivers in the United States" },
                     { value: "80%", label: "Women who assume the role of primary caregivers" },
@@ -551,6 +566,9 @@ export const dictionary: Dictionary = {
             bitacora: {
                 title: "PLATFORM VOICES",
                 introTitle: "A podcast about family caregiving without filters",
+                videoTitle: "Real caregiver stories",
+                videoSubtitle: "Authentic testimonies from those who have walked this path. Listen to their voices, recognize their experience.",
+                videoLabel: "Testimonies",
                 podcastSection: {
                     intro: "Family caregiving does not come with an instruction manual. Nor does it come with permission to ask uncomfortable questions:",
                     questions: [
@@ -892,7 +910,7 @@ export const dictionary: Dictionary = {
                 { name: `Paco Román`, role: "Gaffer & Lighting Technician", bio: `Paco Román is a gaffer and lighting technician based in Miami. He began his career in Barcelona, where he developed a strong technical foundation, then established himself in the United States, working on feature films, shorts, and advertising projects.\n\nFor Paco, light must always serve the story, accompany characters, and reinforce emotion in an honest and sensitive way. On The Last Station, he conducted location scouting and handled lighting during the first days of shooting, helping define the film’s visual tone.\n\nThe project resonated deeply with him through its exploration of caregiving, empathy, and family bonds—universal experiences that inform his work.`, img: "/PACO Roman.jpg" },
                 { name: `Javier Pérez`, role: "Camera Assistant", bio: `Javier Pérez is a Cuban-born camera assistant based in South Florida, with experience in commercials, music videos, and narrative film. He is known for his collaborative approach, on-set problem-solving, and commitment to visual quality.\n\nOn The Last Station, his contribution was essential to the successful completion of an ambitious shoot in just four days. His technical skill and adaptability allowed the team to maintain workflow without compromising the visual sensitivity required by a deeply emotional story.\n\nJavier demonstrates that technical efficiency and artistic attention can go hand in hand, helping capture each moment with precision and care.`, img: "/JAVIER.jpg" },
                 { name: "Marisela Rondon", role: "Wardrobe Stylist", bio: `Venezuelan costume designer and wardrobe stylist based in Miami, with over 20 years of experience in film, television, commercials, and music videos. Bachelor's degree in Social Communication with specialization in Public Relations and Advertising from Universidad Católica Andrés Bello (UCAB).\n\nHer work includes the feature film SIMON THE FILM (2021) directed by Diego Vicentini, the miniseries LA FUERZA DE CREER "DULCE SAZÓN" Season 4 for Univision (2023) directed by Charlie Cartaya, and the short film NYCTO SERIES (2023) directed by Ángel Barroeta.\n\nRecognized for her cultural sensitivity and ability to build characters and emotions through wardrobe, her work combines narrative intuition with meticulous attention to detail. For The Last Station, she creates wardrobe that reflects the characters' emotional journey without competing with the narrative.`, img: "/Marisela Rondon.jpg" },
-                { name: `La Guapa Productions`, role: "Production Design & Props", bio: `Nacho from La Guapa Productions was part of the art department on The Last Station, collaborating on production design and props. His contribution combined technical experience and artistic sensitivity to help build the visual worlds that frame the story, supporting the narrative through detail and visual coherence.`, img: "/pending.jpg" },
+                { name: `José Ignacio Jiménez “Nacho”`, role: "Production Design & Props", bio: `Nacho from La Guapa Productions was part of the art department on The Last Station, collaborating on production design and props. His contribution combined technical experience and artistic sensitivity to help build the visual worlds that frame the story, supporting the narrative through detail and visual coherence.`, img: "/nacho.jpeg" },
                 { name: "Nina Rodrígues", role: "Behind-the-Scenes Photography & Video", bio: `Nina Rodrígues is the photographer and videographer capturing the essence of La Última Estación behind the scenes. With over five years of documenting visual stories in the entertainment industry, Nina brings her artistic sensitivity to preserve every authentic moment of the shoot. Her experience includes work as creative director and official photographer on high-profile music projects, including collaborations with Lagos and Jhay Wheeler (2025), Lil Supa (2025), and CNCO (2022), as well as her work on Luis Chataing's program Conectados (2020).\n\nFor this short film, Nina transcends the traditional role of set documentarian. Her goal is to capture not just the technical shots but the silent emotions between scenes: the vulnerability of actors preparing, the moments of human connection among the crew, and the intimate atmosphere that defines this project. Through both photography and video, she creates a visual narrative that complements the film itself. Her work will serve both as a historical archive of the production and as promotional and press materials, honoring the emotional depth that La Última Estación represents for everyone involved in telling this story about love, loss, and self-rediscovery.`, img: "/nina rodriguez.jpg" },
             ],
             events: [
@@ -994,8 +1012,11 @@ export const dictionary: Dictionary = {
             visionText: "La Última Estación abraza la complejidad del amor y la pérdida sin dramatismo gratuito. Jessica, Annie y John representan un triángulo temporal donde el cuidado se transmite de mujer a mujer a través del tiempo.\n\nEl tren es un confesionario móvil. Cada estación marca una etapa del duelo; cada túnel, una inmersión en la memoria compartida. El ritmo del clack-clack sobre los rieles marca el renacimiento de Jessica.\n\nVisualmente, la paleta emocional evoluciona con su arco: de azules fríos a dorados cálidos. El diario de Annie funciona como puente temporal. El ritual final del fuego se vuelve transformación alquímica, no despedida.\n\nEsta película respira, propone, honra el silencio como lenguaje emocional. Con un elenco que entiende la diferencia entre actuación y verdad, se convertirá en espejo universal.\n\nPorque todos habitamos esta historia sin darnos cuenta. Y merecemos verla reflejada con dignidad.",
             galleryTitle: "Galería",
             bloopersTitle: "Bloopers",
+            videoVoicesTitle: "Voces Detrás de la Cámara",
+            videoVoicesText: "Escucha al director Eduardo Pardo y a la guionista Jackie Zambrano hablar sobre la visión creativa, el proceso de producción y el corazón emocional de La Última Estación.",
+            videoVoicesLabel: "Visión Creativa",
             invisibleReality: {
-                title: "LA REALIDAD INVISIBLE",
+                title: "La Realidad Invisible",
                 stats: [
                     { value: "63 millones", label: "Cuidadores familiares no remunerados en Estados Unidos" },
                     { value: "80%", label: "Mujeres que asumen el rol de cuidadoras primarias" },
@@ -1015,6 +1036,9 @@ export const dictionary: Dictionary = {
             bitacora: {
                 title: "VOCES DEL ANDÉN",
                 introTitle: "Un podcast sobre el cuidado familiar sin filtros",
+                videoTitle: "Historias Reales de Cuidadores",
+                videoSubtitle: "Testimonios auténticos de quienes han caminado este camino. Escucha sus voces, reconoce su experiencia.",
+                videoLabel: "Testimonios",
                 podcastSection: {
                     intro: "El cuidado familiar no viene con un manual de instrucciones. Tampoco con permiso para hacer las preguntas incómodas:",
                     questions: [
@@ -1352,7 +1376,7 @@ export const dictionary: Dictionary = {
                 { name: `Paco Román`, role: "Gaffer & Técnico de Iluminación", bio: `Paco Román es gaffer y técnico de iluminación con base en Miami. Inició su carrera en Barcelona, donde desarrolló una sólida base técnica antes de establecerse en Estados Unidos trabajando en cine, cortometrajes y proyectos publicitarios.\n\nPara Paco, la luz debe estar siempre al servicio de la historia, acompañando a los personajes y reforzando la emoción de forma honesta. En La Última Estación, realizó el scouting de locaciones y estuvo a cargo de la iluminación durante los primeros días de rodaje, lo que ayudó a definir el tono visual del film.\n\nEl proyecto conectó profundamente con él por su exploración del cuidado, la empatía y los vínculos familiares, valores universales que atraviesan su trabajo.`, img: "/PACO Roman.jpg" },
                 { name: `Javier Pérez`, role: "Asistente de Cámara", bio: `Javier Pérez es asistente de cámara de origen cubano, radicado en el sur de Florida, con experiencia en comerciales, videoclips y cine narrativo. Se distingue por su enfoque colaborativo, su capacidad para resolver imprevistos en set y su compromiso con la calidad visual.\n\nEn La Última Estación, su aporte fue fundamental para realizar un rodaje ambicioso en solo cuatro días. Su destreza técnica y adaptabilidad permitieron mantener el ritmo de trabajo sin sacrificar la sensibilidad visual que requería una historia profundamente emocional.\n\nJavier demuestra que la eficiencia técnica y la atención artística pueden convivir, contribuyendo a capturar cada momento con precisión y cuidado.`, img: "/JAVIER.jpg" },
                 { name: "Marisela Rondon", role: "Estilista de Vestuario", bio: `Diseñadora de vestuario y wardrobe stylist venezolana con sede en Miami, con más de 20 años de experiencia en cine, televisión, comerciales y videos musicales. Licenciada en Comunicación Social con especialización en Relaciones Públicas y Publicidad por la Universidad Católica Andrés Bello (UCAB).\n\nSu trabajo incluye el largometraje SIMON THE FILM (2021) dirigido por Diego Vicentini, la miniserie LA FUERZA DE CREER "DULCE SAZÓN" Temporada 4 para Univision (2023) dirigida por Charlie Cartaya, y el cortometraje NYCTO SERIES (2023) dirigido por Ángel Barroeta.\n\nReconocida por su sensibilidad cultural y habilidad para construir personajes y emociones a través del vestuario, su trabajo combina intuición narrativa con atención meticulosa al detalle. Para La Última Estación, crea un vestuario que refleja el viaje emocional de los personajes sin competir con la narrativa.`, img: "/Marisela Rondon.jpg" },
-                { name: `La Guapa Productions`, role: "Production Design & Props", bio: `Nacho, de la Guapa Productions, formó parte del departamento de arte de La Última Estación, colaborando en el diseño de producción y utilería. Su aporte combinó experiencia técnica y sensibilidad artística para construir los mundos visuales que sirven de marco a la historia, apoyando la narrativa desde los detalles y la coherencia estética del film.`, img: "/pending.jpg" },
+                { name: `José Ignacio Jiménez “Nacho” `, role: "Production Design & Props", bio: `Nacho, de la Guapa Productions, formó parte del departamento de arte de La Última Estación, colaborando en el diseño de producción y utilería. Su aporte combinó experiencia técnica y sensibilidad artística para construir los mundos visuales que sirven de marco a la historia, apoyando la narrativa desde los detalles y la coherencia estética del film.`, img: "/Nacho.jpeg" },
                 { name: "Nina Rodrígues", role: "Fotografía & Video Behind the Scenes", bio: `Nina Rodrígues es la fotógrafa y videógrafa detrás de las imágenes que capturan la esencia de La Última Estación. Con más de cinco años documentando historias visuales en la industria del entretenimiento, Nina aporta su sensibilidad artística para preservar cada momento auténtico del rodaje. Su experiencia incluye trabajo como directora creativa y fotógrafa oficial en proyectos musicales de alto perfil, incluyendo colaboraciones con Lagos y Jhay Wheeler (2025), Lil Supa (2025), y CNCO (2022), además de su labor en el programa Conectados de Luis Chataing (2020).\n\nPara este cortometraje, Nina trasciende el rol tradicional de documentalista del set. Su objetivo es capturar no solo las tomas técnicas sino las emociones silenciosas entre escenas: la vulnerabilidad de los actores preparándose, los instantes de conexión humana del equipo, y la atmósfera íntima que define este proyecto. A través de fotografía y video, crea una narrativa visual que complementa la película misma. Su trabajo servirá tanto para el archivo histórico de la producción como para el material promocional y de prensa, honrando la profundidad emocional que La Última Estación representa para todos los involucrados en contar esta historia sobre amor, pérdida y redescubrimiento.`, img: "/nina rodriguez.jpg" },
             ],
             events: [

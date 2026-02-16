@@ -20,8 +20,16 @@ export default function TestimonialesPage() {
             <Hero title={t.pages.bitacora.title} />
 
             <section className="py-20 px-4 bg-black relative">
-                <div className="absolute inset-x-0 top-0 h-40 bg-gradient-to-b from-black to-transparent pointer-events-none" />
-                <div className="max-w-7xl mx-auto flex flex-col items-center">
+                <div className="max-w-7xl mx-auto flex flex-col items-center space-y-12">
+                    <div className="max-w-4xl mx-auto text-center space-y-6 px-4">
+                        <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white uppercase">
+                            {t.pages.bitacora.videoTitle}
+                        </h2>
+                        <p className="text-base md:text-lg leading-relaxed text-gray-300 whitespace-pre-wrap">
+                            {t.pages.bitacora.videoSubtitle}
+                        </p>
+                    </div>
+
                     <VideoPlayer
                         onPlay={() => setIsVideoModalOpen(true)}
                     />

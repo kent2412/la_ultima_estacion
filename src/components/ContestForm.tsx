@@ -31,13 +31,15 @@ export default function ContestForm() {
                     {/* Schedule */}
                     <div className="space-y-6">
                         <h3 className="text-2xl font-bold text-[#E8D860] uppercase tracking-widest text-center">{t.pages.contest.scheduleTitle}</h3>
-                        <div className="grid gap-4 max-w-3xl mx-auto bg-black/20 p-6 rounded-xl border border-white/5 shadow-inner">
-                            {t.pages.contest.schedule.map((item, index) => (
-                                <div key={index} className="flex flex-col sm:flex-row sm:items-center gap-2 sm:gap-6 border-b border-white/5 pb-3 last:border-0 last:pb-0 text-base">
-                                    <span className="text-white font-bold min-w-[200px] text-[#E8D860]">{item.date}</span>
-                                    <span className="text-gray-300">{item.event}</span>
-                                </div>
-                            ))}
+                        <div className="max-w-3xl mx-auto bg-black/20 p-6 rounded-xl border border-white/5 shadow-inner">
+                            <div className="grid gap-4">
+                                {t.pages.contest.schedule.map((item, index) => (
+                                    <div key={index} className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0 text-base">
+                                        <span className="text-[#E8D860] font-bold font-copperplate">{item.date}</span>
+                                        <span className="text-gray-300 leading-relaxed">{item.event}</span>
+                                    </div>
+                                ))}
+                            </div>
                         </div>
                     </div>
 
