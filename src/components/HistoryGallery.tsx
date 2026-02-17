@@ -2,11 +2,47 @@
 
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
-import { useState } from "react";
+import { useState, useEffect, useCallback } from "react";
+
+const GALLERY_IMAGES = [
+    { src: "/galeria1.jpg", alt: "Galeria 1", className: "md:top-[2%] md:left-[5%] md:w-[32%] md:-rotate-3", zIndex: "z-10" },
+    { src: "/galeria2.jpg", alt: "Galeria 2", className: "md:top-[5%] md:left-[28%] md:w-[28%] md:rotate-2", zIndex: "z-20", tape: { pos: "top-4 -left-6", rot: "-rotate-[15deg]" } },
+    { src: "/galeria3.jpg", alt: "Galeria 3", className: "md:top-[2%] md:left-[52%] md:w-[30%] md:-rotate-1", zIndex: "z-10", tape: { pos: "-bottom-4 left-4", rot: "rotate-[5deg]" } },
+    { src: "/galeria4.jpg", alt: "Galeria 4", className: "md:top-[22%] md:left-[2%] md:w-[26%] md:rotate-4", zIndex: "z-30", tape: { pos: "top-4 -right-6", rot: "rotate-[10deg]" } },
+    { src: "/galeria5.jpg", alt: "Galeria 5", className: "md:top-[25%] md:left-[25%] md:w-[38%] md:-rotate-2", zIndex: "z-10" },
+    { src: "/galeria6.jpg", alt: "Galeria 6", className: "md:top-[18%] md:left-[60%] md:w-[28%] md:rotate-3", zIndex: "z-20", tape: { pos: "-top-3 right-2", rot: "rotate-[15deg]" } },
+    { src: "/galeria7.jpg", alt: "Galeria 7", className: "md:top-[42%] md:left-[8%] md:w-[30%] md:-rotate-4", zIndex: "z-20" },
+    { src: "/galeria8.jpg", alt: "Galeria 8", className: "md:top-[48%] md:left-[35%] md:w-[33%] md:rotate-1", zIndex: "z-30", tape: { pos: "-top-4 right-1/2 translate-x-1/2", rot: "rotate-[0deg]" } },
+    { src: "/galeria9.jpg", alt: "Galeria 9", className: "md:top-[40%] md:left-[64%] md:w-[28%] md:-rotate-3", zIndex: "z-10" },
+    { src: "/galeria10.jpg", alt: "Galeria 10", className: "md:top-[65%] md:left-[5%] md:w-[32%] md:rotate-2", zIndex: "z-10" },
+    { src: "/galeria11.jpg", alt: "Galeria 11", className: "md:top-[68%] md:left-[32%] md:w-[28%] md:-rotate-2", zIndex: "z-20", tape: { pos: "top-4 -left-6", rot: "-rotate-[10deg]" } },
+    { src: "/galeria12.JPG", alt: "Galeria 12", className: "md:top-[62%] md:left-[60%] md:w-[32%] md:rotate-3", zIndex: "z-10" },
+];
 
 export default function HistoryGallery() {
     const { t } = useLanguage();
-    const [selectedImage, setSelectedImage] = useState<string | null>(null);
+    const [selectedIndex, setSelectedIndex] = useState<number | null>(null);
+
+    const handleNext = useCallback(() => {
+        if (selectedIndex === null) return;
+        setSelectedIndex((prev) => (prev !== null && prev < GALLERY_IMAGES.length - 1 ? prev + 1 : 0));
+    }, [selectedIndex]);
+
+    const handlePrev = useCallback(() => {
+        if (selectedIndex === null) return;
+        setSelectedIndex((prev) => (prev !== null && prev > 0 ? prev - 1 : GALLERY_IMAGES.length - 1));
+    }, [selectedIndex]);
+
+    useEffect(() => {
+        const handleKeyDown = (e: KeyboardEvent) => {
+            if (selectedIndex === null) return;
+            if (e.key === "ArrowRight") handleNext();
+            if (e.key === "ArrowLeft") handlePrev();
+            if (e.key === "Escape") setSelectedIndex(null);
+        };
+        window.addEventListener("keydown", handleKeyDown);
+        return () => window.removeEventListener("keydown", handleKeyDown);
+    }, [selectedIndex, handleNext, handlePrev]);
 
     return (
         <section className="bg-[#1A1A1A] py-24 px-4 overflow-hidden">
@@ -15,112 +51,87 @@ export default function HistoryGallery() {
                     {t.history.galleryTitle}
                 </h2>
 
-                <div className="relative w-full max-w-6xl mx-auto flex flex-col gap-8 md:block md:h-[900px]">
-
-                    {/* 1. Large Left - Train Platform */}
-                    <div
-                        className="relative w-full aspect-video md:absolute md:top-[10%] md:left-0 md:w-[35%] md:h-[80%] z-10 transform-none md:-rotate-1 transition-transform hover:scale-105 hover:z-50 hover: md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_1.png")}
-                    >
-                        <Image src="/galeria_1.png" alt="Plataforma" fill className="object-cover opacity-90 drop-shadow-2xl" />
-                    </div>
-
-                    {/* 2. Overlap Left - Woman Writing */}
-                    <div
-                        className="relative w-full aspect-[3/4] md:absolute md:top-[25%] md:left-[30%] md:w-[26%] z-20 transform-none md:rotate-3 transition-transform hover:scale-105 md:hover:scale-110 hover:z-50 md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_2.jpg")}
-                    >
-                        {/* Tape connecting to Platform */}
-                        <div className="hidden md:block absolute top-4 -left-6 w-[100px] h-[40px] rotate-[-15deg] z-30 opacity-80 mix-blend-multiply pointer-events-none">
-                            <Image src="/tape.png" alt="" fill className="object-contain" />
+                <div className="relative w-full max-w-6xl mx-auto flex flex-col gap-8 md:block md:h-[1000px]">
+                    {GALLERY_IMAGES.map((img, index) => (
+                        <div
+                            key={index}
+                            className={`relative w-full aspect-video md:absolute ${img.className} ${img.zIndex} transform-none transition-transform hover:scale-105 hover:z-50 md:hover:rotate-0 cursor-pointer`}
+                            onClick={() => setSelectedIndex(index)}
+                        >
+                            {img.tape && (
+                                <div className={`hidden md:block absolute ${img.tape.pos} w-[100px] h-[40px] ${img.tape.rot} z-30 opacity-80 mix-blend-multiply pointer-events-none`}>
+                                    <Image src="/tape.png" alt="" fill className="object-contain" />
+                                </div>
+                            )}
+                            <Image
+                                src={img.src}
+                                alt={img.alt}
+                                fill
+                                className={`object-cover ${index % 3 === 0 ? 'opacity-90' : ''} drop-shadow-2xl`}
+                            />
                         </div>
-                        <Image src="/galeria_2.jpg" alt="Escritura" fill className="object-cover drop-shadow-2xl" />
-                    </div>
-
-                    {/* 3. Top Center - Elderly Couple */}
-                    <div
-                        className="relative w-full aspect-video md:absolute md:top-[5%] md:left-[38%] md:w-[28%] z-10 transform-none md:-rotate-2 transition-transform hover:scale-105 md:hover:scale-110 hover:z-50 md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_3.JPG")}
-                    >
-                        {/* Tape connecting to Writing (conceptually) */}
-                        <div className="hidden md:block absolute -bottom-4 left-4 w-[90px] h-[35px] rotate-[5deg] z-30 opacity-80 mix-blend-multiply pointer-events-none">
-                            <Image src="/tape.png" alt="" fill className="object-contain" />
-                        </div>
-                        <Image src="/galeria_3.JPG" alt="Pareja" fill className="object-cover drop-shadow-2xl" />
-                    </div>
-
-                    {/* 4. Top Right - Masks (Moved from position 5) */}
-                    <div
-                        className="relative w-full aspect-video md:absolute md:top-[8%] right-[2%] md:w-[34%] z-20 transform-none md:rotate-3 transition-transform hover:scale-105 md:hover:scale-110 hover:z-50 md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_4.JPG")}
-                    >
-                        {/* Tape connecting to Elderly Couple */}
-                        <div className="hidden md:block absolute top-4 -left-6 w-[100px] h-[40px] rotate-[-10deg] z-30 opacity-80 mix-blend-multiply pointer-events-none">
-                            <Image src="/tape.png" alt="" fill className="object-contain" />
-                        </div>
-                        <Image src="/galeria_4.JPG" alt="Mascarillas" fill className="object-cover drop-shadow-2xl" />
-                    </div>
-
-                    {/* 5. Center - Two Women (Moved from position 4) */}
-                    <div
-                        className="relative w-full aspect-video md:absolute md:top-[34%] md:left-[52%] md:w-[42%] z-10 transform-none md:rotate-1 transition-transform hover:scale-105 md:hover:scale-110 hover:z-50 md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_5.JPG")}
-                    >
-                        {/* Tape connecting to Masks */}
-                        <div className="hidden md:block absolute -top-3 right-2 w-[80px] h-[35px] rotate-[15deg] z-30 opacity-80 mix-blend-multiply pointer-events-none">
-                            <Image src="/tape.png" alt="" fill className="object-contain" />
-                        </div>
-                        <Image src="/galeria_5.JPG" alt="Amigas" fill className="object-cover drop-shadow-2xl" />
-                    </div>
-
-                    {/* 6. Bottom Center - Park/Dancing */}
-                    <div
-                        className="relative w-full aspect-video md:absolute md:bottom-[5%] md:left-[35%] md:w-[40%] z-20 transform-none md:-rotate-2 transition-transform hover:scale-105 md:hover:scale-110 hover:z-50 md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_2.jpg")}
-                    >
-                        {/* Tape connecting to Two Women */}
-                        <div className="hidden md:block absolute -top-4 right-1/2 translate-x-1/2 w-[90px] h-[40px] rotate-[0deg] z-30 opacity-80 mix-blend-multiply pointer-events-none">
-                            <Image src="/tape.png" alt="" fill className="object-contain" />
-                        </div>
-                        <Image src="/galeria_2.jpg" alt="Parque" fill className="object-cover drop-shadow-2xl" />
-                    </div>
-
-                    {/* 7. Bottom Right - Fire/Kiss */}
-                    <div
-                        className="relative w-full aspect-[3/4] md:absolute md:bottom-[2%] md:right-[1%] md:w-[25%] z-10 transform-none md:rotate-2 transition-transform hover:scale-105 md:hover:scale-110 hover:z-50 md:hover:rotate-0 cursor-pointer"
-                        onClick={() => setSelectedImage("/galeria_6.jpg")}
-                    >
-                        <Image src="/galeria_6.jpg" alt="Fuego" fill className="object-cover sepia-[20%] drop-shadow-2xl" />
-                    </div>
-
+                    ))}
                 </div>
             </div>
 
             {/* Modal */}
-            {selectedImage && (
+            {selectedIndex !== null && (
                 <div
-                    className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 cursor-pointer"
-                    onClick={() => setSelectedImage(null)}
+                    className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4"
+                    onClick={() => setSelectedIndex(null)}
                 >
-                    <div className="relative w-full h-full max-w-7xl max-h-[90vh]">
-                        <Image
-                            src={selectedImage}
-                            alt="Gallery Preview"
-                            fill
-                            className="object-contain"
-                            quality={100}
-                        />
+                    <div className="relative w-full h-full max-w-7xl max-h-[90vh] flex items-center justify-center" onClick={(e) => e.stopPropagation()}>
+                        {/* Control Anterior */}
                         <button
-                            className="absolute top-4 right-4 text-white/50 hover:text-white transition-colors"
+                            className="absolute left-4 md:-left-12 z-[110] text-white/50 hover:text-white transition-colors p-2"
                             onClick={(e) => {
                                 e.stopPropagation();
-                                setSelectedImage(null);
+                                handlePrev();
                             }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 md:w-16 md:h-16">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M15.75 19.5L8.25 12l7.5-7.5" />
+                            </svg>
+                        </button>
+
+                        <div className="relative w-full h-full">
+                            <Image
+                                src={GALLERY_IMAGES[selectedIndex].src}
+                                alt={GALLERY_IMAGES[selectedIndex].alt}
+                                fill
+                                className="object-contain"
+                                quality={100}
+                                priority
+                            />
+                        </div>
+
+                        {/* Control Siguiente */}
+                        <button
+                            className="absolute right-4 md:-right-12 z-[110] text-white/50 hover:text-white transition-colors p-2"
+                            onClick={(e) => {
+                                e.stopPropagation();
+                                handleNext();
+                            }}
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={2} stroke="currentColor" className="w-10 h-10 md:w-16 md:h-16">
+                                <path strokeLinecap="round" strokeLinejoin="round" d="M8.25 4.5l7.5 7.5-7.5 7.5" />
+                            </svg>
+                        </button>
+
+                        {/* Botón Cerrar */}
+                        <button
+                            className="absolute -top-12 right-0 md:top-0 md:-right-12 text-white/50 hover:text-white transition-colors p-2"
+                            onClick={() => setSelectedIndex(null)}
                         >
                             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" strokeWidth={1.5} stroke="currentColor" className="w-10 h-10">
                                 <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
                             </svg>
                         </button>
+
+                        {/* Indicador de número */}
+                        <div className="absolute -bottom-10 left-1/2 -translate-x-1/2 text-white/50 font-medium">
+                            {selectedIndex + 1} / {GALLERY_IMAGES.length}
+                        </div>
                     </div>
                 </div>
             )}
