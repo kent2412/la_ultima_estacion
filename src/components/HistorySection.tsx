@@ -79,7 +79,7 @@ export default function HistorySection() {
 
                         <div className="relative w-full h-full overflow-hidden rounded-sm shadow-2xl filter grayscale-[20%] hover:grayscale-0 transition-all duration-700">
                             <Image
-                                src="/director.JPG"
+                                src="/director.jpg"
                                 alt="Director"
                                 fill
                                 className="object-cover"
