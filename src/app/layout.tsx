@@ -24,8 +24,8 @@ const copperplate = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "The Last Station",
-  description: "Official website for The Last Station / La Última Estación",
+  title: "La Última Estación",
+  description: "Official website for La Última Estación / The Last Station",
 };
 
 import { LanguageProvider } from "@/context/LanguageContext";
