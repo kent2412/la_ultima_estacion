@@ -105,7 +105,7 @@ export default function ContestForm() {
                                 </h4>
                                 <div className="py-4 w-full flex flex-col items-center gap-4">
                                     <a
-                                        href={isEnabled ? "https://docs.google.com/forms/d/1s17XzpqkUO6ukFx6adblA9l0iHixf_urHAPP2qEumdk/viewform?pli=1&pli=1&edit_requested=true" : undefined}
+                                        href={isEnabled ? t.pages.contest.form.googleFormLink : undefined}
                                         target={isEnabled ? "_blank" : undefined}
                                         rel={isEnabled ? "noopener noreferrer" : undefined}
                                         className={`inline-flex items-center justify-between gap-3 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform font-copperplate uppercase tracking-wider ${

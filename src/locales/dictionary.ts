@@ -187,6 +187,7 @@ export interface Dictionary {
                     uploadLabel: string;
                     submitButton: string;
                     availableDate: string;
+                    googleFormLink: string;
                 };
             };
             shop: {
@@ -439,6 +440,7 @@ export interface Dictionary {
                     uploadLabel: string;
                     submitButton: string;
                     availableDate: string;
+                    googleFormLink: string;
                 };
             };
             shop: {
@@ -801,6 +803,7 @@ export const dictionary: Dictionary = {
                     uploadLabel: "Upload File (Story)",
                     submitButton: "Submit Story",
                     availableDate: "The contest will start on March 29, 2026.",
+                    googleFormLink: "https://docs.google.com/forms/d/16ObYtwxEXwUTFjtZaUCmPfkqVdKcI-JU56tHmlQxFRA/viewform?edit_requested=true",
                 }
             },
             shop: {
@@ -1276,6 +1279,7 @@ export const dictionary: Dictionary = {
                     uploadLabel: "Subir archivo (Historia)",
                     submitButton: "Enviar Historia",
                     availableDate: "El concurso iniciará el 29 de marzo de 2026.",
+                    googleFormLink: "https://docs.google.com/forms/d/1s17XzpqkUO6ukFx6adblA9l0iHixf_urHAPP2qEumdk/viewform?pli=1&pli=1&edit_requested=true",
                 },
             },
             shop: {
