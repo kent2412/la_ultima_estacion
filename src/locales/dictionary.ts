@@ -140,6 +140,7 @@ export interface Dictionary {
                     text1: string;
                     text2: string;
                     follow: string;
+                    googleFormLink: string;
                 };
             };
             history: {
@@ -175,6 +176,7 @@ export interface Dictionary {
                 };
                 copyrightTitle: string;
                 copyrightText: string;
+                copyrightContact: string;
                 finalistsTitle: string;
                 finalistsAnnouncement: string;
                 form: {
@@ -184,6 +186,7 @@ export interface Dictionary {
                     phonePlaceholder: string;
                     uploadLabel: string;
                     submitButton: string;
+                    availableDate: string;
                 };
             };
             shop: {
@@ -389,6 +392,7 @@ export interface Dictionary {
                     text1: string;
                     text2: string;
                     follow: string;
+                    googleFormLink: string;
                 };
             };
             history: {
@@ -424,6 +428,7 @@ export interface Dictionary {
                 };
                 copyrightTitle: string;
                 copyrightText: string;
+                copyrightContact: string;
                 finalistsTitle: string;
                 finalistsAnnouncement: string;
                 form: {
@@ -433,6 +438,7 @@ export interface Dictionary {
                     phonePlaceholder: string;
                     uploadLabel: string;
                     submitButton: string;
+                    availableDate: string;
                 };
             };
             shop: {
@@ -700,7 +706,8 @@ export const dictionary: Dictionary = {
                 announcement: {
                     text1: "Screenings of The Last Station will be announced as they are scheduled.",
                     text2: "Starting in June 2026, we will share confirmed dates and venues so you can know when the film will arrive in your city or community.",
-                    follow: "Follow us or subscribe to receive upcoming screening dates."
+                    follow: "Follow us or subscribe to receive upcoming screening dates.",
+                    googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSegDaLE4f9Nyx1IeNHQPy33u4vFbxAqgLKo9KhGCSLtHyEWTw/viewform?embedded=true"
                 }
             },
             history: {
@@ -722,7 +729,7 @@ export const dictionary: Dictionary = {
                     { date: "March 29 – May 15, 2026", event: "Submission Period" },
                     { date: "May 16 – June 10, 2026", event: "Jury Review Period" },
                     { date: "June 15, 2026", event: "Winners Announcement" },
-                    { date: "June 2026", event: "Awards Ceremony and Testimonial Recording\n(Exact date to be announced)" },
+                    { date: "June 2026", event: "Awards Ceremony and Testimonial Recording\n(exact date and other details to be announced)" },
                     { date: "July 2026", event: "Publication of the Historias de Andén Anthology" }
                 ],
                 rulesTitle: "CONTEST GUIDELINES",
@@ -731,17 +738,18 @@ export const dictionary: Dictionary = {
                     participants: [
                         "18 years or older, any country",
                         "Texts in Spanish or English",
-                        "No registration or previous experience required"
+                        "Registration is free",
+                        "Open to writers or aspiring writers (no prior experience required)"
                     ],
                     themeTitle: "THEME",
-                    theme: "Stories or tales about the experience of unpaid caregivers. Sensitivity, authenticity, and emotional honesty will be valued.",
+                    theme: "Stories or tales based on your experience as an unpaid caregiver. Sensitivity, authenticity, and emotional honesty will be valued.",
                     formatTitle: "FORMAT",
                     format: [
-                        "Length: 1,000–2,500 words",
-                        "Format: Word or PDF",
+                        "Length: 1,000–1,500 words",
+                        "Format: PDF",
                         "Font: Times New Roman, 12 pt, 1.5 line spacing"
                     ],
-                    submissionTitle: "SUBMISSION",
+                    submissionTitle: "Submmision",
                     submission: [
                         "Send to: concurso@laultimaestacionfilm.com",
                         "Subject: \"Contest: Platform Stories – [Author's Name]\""
@@ -782,6 +790,7 @@ export const dictionary: Dictionary = {
                 },
                 copyrightTitle: "COPYRIGHT",
                 copyrightText: "Authors retain copyright over their works. Jackie Zambrano LLC / Hyper Creative Studios reserves non-exclusive rights to publish, disseminate, and adapt selected texts, always citing authorship, without additional compensation.",
+                copyrightContact: "For more information or if you have any questions, you can contact us at: concurso@laultimaestacionfilm.com",
                 finalistsTitle: "FINALISTS",
                 finalistsAnnouncement: "Finalists will be announced on June 15, 2026",
                 form: {
@@ -791,6 +800,7 @@ export const dictionary: Dictionary = {
                     phonePlaceholder: "Phone Number",
                     uploadLabel: "Upload File (Story)",
                     submitButton: "Submit Story",
+                    availableDate: "The contest will start on March 29, 2026.",
                 }
             },
             shop: {
@@ -903,7 +913,7 @@ export const dictionary: Dictionary = {
                 { name: "Daniel Bethencourt Lambert", role: "Executive Producer, Post-Production Supervisor & Editor", bio: "CEO and executive producer of Mar de Fondo LLC with over 23 years of experience in audiovisual media, television, and digital content. Master's degree in Digital Film Direction and Production from Universidad de La Laguna, Spain.\n\nHe served as general director of Sun Channel and Sport Plus Channel in Venezuela and graphics services manager at Venevisión, responsible for the network's branding. Winner of Golden Promax Los Angeles 2002 and Silver Latin BDA Argentina 2002. He has been a jury member at Promax & BDA International and speaker at international sports marketing forums.\n\nBased in Miami since 2010, he specializes in artistic direction, project management, and international content production. His executive experience at major television networks ensures professional standards while operating within independent film budget realities.", img: "/Daniel Bethencourt.jpeg" },
                 { name: "Marielena Zuccaro", role: "Production Manager", bio: `Marielena Zuccaro is a U.S.-based audiovisual producer and co-founder of VAZU, a production services company that provides comprehensive on-set support, production supplies, vehicles, and communication systems to facilitate seamless audiovisual logistics across South Florida productions.\n\nSince 2020, she has worked across film, commercials, music videos, and television as Production Coordinator, Production Manager, and Producer. Her portfolio includes narrative films (Phoenix, The Devil Trap, Paper Empire), television promotions for Telemundo, Univision, and Unimas, branded campaigns with Kenneth Cole, Hyundai, Baptist Health, Lowe's, and Zara, plus music videos for Bad Bunny, Karol G, Shakira, Ozuna, and Juanes.\n\nMarielena brings structure, creative sensitivity, and entrepreneurial vision to every production.`, img: "/MARIELENA ZUCCARO.jpg" },
                 { name: "Charlie Nelson", role: "Director of Photography", bio: `Latin Grammy-nominated director and cinematographer, known for his work with artists such as Reik, Myke Towers, Ozuna, Camilo, Luis Fonsi, and Grupo Firme. Winner of Video of the Year at the 2021 Heat Awards and two 2023 Pepsi Music Awards, including "Video of the Year."\n\nHis video "Ojos Marrones" by Lasso was recognized by MTV as one of the best of 2022. In 2023 he won a Silver Telly Award for his Hyundai project. Founder of the production company "We Want To Film," he is currently working on his first feature film.\n\nBased in Miami, his eclectic, narrative-focused style has been featured at Premios Juventud and Billboard. For The Last Station, he brings his proven ability to capture emotional intimacy on camera, translating the director's vision into a visual language that honors the dignity of caregivers.`, img: "/Charlie Nelson.jpeg" },
-                { name: "Joe Centeno", role: "Art Director & Graphic Designer | Branding", bio: "Senior art director, illustrator, and graphic designer with over 30 years of experience in creative direction and visual production for film, television, advertising campaigns, and digital content. He masters both traditional analog techniques (freehand drawing, ink illustration, airbrush) and advanced digital production.\n\nSince 2010, he has been Art Director at Jackie Zambrano LLC/Hyper Creative Studios, where he has created the complete branding for The Last Station. He has developed the visual identity of the talk show Geraldo in Spanish for Latin America, campaigns for Western Union in Central America and the Caribbean, and branding for artists such as Cris Campocasso, Franco de Vita, and Carlos Baute, in addition to the branding of KOATI, an animated film on Netflix.\n\nHis work includes storyboards for Celuloide productions and branding for international concerts in Venezuela (Alanis Morissette, Rubén Blades, Shakira, David Copperfield). Designer of the magazine Miami para Niños, he fuses visual identity and narrative creating cohesive experiences.", img: "/Joe Centeno.jpg" },
+                { name: "Joe Centeno", role: "Art Director & Graphic Designer | Branding", bio: "Senior Art Director, illustrator, and graphic designer with over 30 years of experience in creative direction and visual production for film, television, advertising, and digital content. He masters both traditional analog techniques—freehand drawing, ink illustration, and airbrushing—and advanced digital production.\n\nSince 2010, he has served as Art Director at Jackie Zambrano LLC/Hyper Creative Studios, where he created the complete visual identity for The Last Station. His portfolio includes visual branding for the Spanish talk show Geraldo, campaigns for Western Union, BTL for artists such as Franco De Vita and Carlos Baute, the film KOATI (now a Netflix series), and international events featuring Shakira, Rubén Blades, and Alanis Morissette.\n\nThe Last Station came to Joe in a deeply personal way: he watched his mother slowly disappear while caring for his parents and sister, consumed by that silent love until she passed away. That story —hers, and his— pulses through every visual line of this project.", img: "/Joe Centeno.jpg" },
                 { name: "Alejandro Campos", role: "Composer & Audio Engineer", bio: `Composer, music producer, pianist, and orchestra conductor based in Miami. Winner of the 2004 ASCAP award for "Así es la Vida," recognized as Best Pop Song of the Year and performed by Olga Tañón.\n\nHe has composed original music for 18 telenovelas broadcast worldwide, including La Revancha, Gata Salvaje, and Eva Luna, for companies such as Fonovideo and Venevisión Productions. As a music producer, he has worked with Sony Music artists including Franco de Vita, Chayanne, Leda Batisti, and Axel, among others.\n\nHe has performed as pianist and musical director alongside figures such as Dionne Warwick, Christopher Cross, Arturo Sandoval, and Jon Secada. He is currently Composer in Residence of the Miami Symphony Orchestra under the direction of Maestro Eduardo Marturet. For The Last Station, he creates an original score with piano as the main instrument.`, img: "/Alejandro Campos.jpg" },
                 { name: "Arturo Manuitt", role: "First Assistant Director", bio: "Director and two-time Regional Suncoast Emmy Award winner (2019-2022), specializing in commercials, music videos, television, and film. He has directed productions for Nickelodeon Latin America (ISA TKM, GRACHI, Every Witch Way) and Telemundo/NBC (Corazón Valiente, Santa Diabla).\n\nHis work includes campaigns for brands such as Marvel, Paramount, L'Oréal, and Universal Pictures, including Captain Marvel and Mission: Impossible – Fallout. He began his career in Venezuela directing the country's first sitcom with a live audience and internationally acclaimed telenovelas for RCTV.\n\nAs first assistant director on The Last Station, he coordinates all film departments and manages the shooting schedule. His two Emmys and extensive experience across multiple formats ensure professional execution under the compressed timelines of independent production.", img: "/Arturo Manuitt.jpg" },
                 { name: `Arnaldo Rocco Bruno Barrios (“Nano”)`, role: "Second Assistant Director", bio: `Arnaldo Rocco Bruno Barrios is a Venezuelan director, screenwriter, and audiovisual producer. He began his acting career at age 13, which led him to develop skills in directing and production.\n\nHe has written and directed internationally recognized short films, including José and Coming Home, and has been an Official Selection at festivals such as the Spooky Empire Horror Film Festival. He is also the author of the young adult novel Primitive.\n\nOn The Last Station, he served as second assistant director and oversaw the wrap on the final day of shooting, contributing to the successful completion of a demanding production in just four days.`, img: "/Arnaldo Rocco Bruno Barrios.jpg" },
@@ -1171,7 +1181,8 @@ export const dictionary: Dictionary = {
                 announcement: {
                     text1: "Las proyecciones de La Última Estación se irán anunciando a medida que se programen.",
                     text2: "A partir de junio de 2026, compartiremos las fechas y sedes confirmadas para que conozcas cuándo la película llegará a tu ciudad o comunidad.",
-                    follow: "Síguenos o suscríbete para recibir las próximas fechas de proyección."
+                    follow: "Síguenos o suscríbete para recibir las próximas fechas de proyección.",
+                    googleFormLink: "https://docs.google.com/forms/d/e/1FAIpQLSdWB4OzfMi4QFb1nJfsFaLikHh6ugiO4oCWkhcj31xzlrUJbg/viewform?embedded=true"
                 }
             },
             history: {
@@ -1193,7 +1204,7 @@ export const dictionary: Dictionary = {
                     { date: "29 de marzo – 15 de mayo de 2026", event: "Recepción de relatos" },
                     { date: "16 de mayo – 10 de junio de 2026", event: "Evaluación del jurado" },
                     { date: "15 de junio de 2026", event: "Anuncio de ganadores" },
-                    { date: "Junio 2026", event: "Ceremonia de premiación y grabación de testimonios\n(fecha exacta por anunciar)" },
+                    { date: "Junio 2026", event: "Ceremonia de premiación y grabación de testimonios\n(fecha exacta y otros detalles por anunciar)" },
                     { date: "Julio 2026", event: "Publicación de la antología Historias de Andén" }
                 ],
                 rulesTitle: "BASES DEL CONCURSO",
@@ -1202,17 +1213,18 @@ export const dictionary: Dictionary = {
                     participants: [
                         "Mayores de 18 años, de cualquier país",
                         "Textos en español o inglés",
-                        "No se requiere inscripción ni experiencia previa"
+                        "La inscripción es gratuita",
+                        "Dirigido a escritores o aspirantes a escritor (no requiere experiencia previa)"
                     ],
                     themeTitle: "TEMA",
-                    theme: "Relatos o cuentos sobre la experiencia de cuidadores no remunerados. Se valorará la sensibilidad, autenticidad y honestidad emocional.",
+                    theme: "Historias o cuentos basados en tu experiencia como cuidador/a no remunerado/a.Se valorarán la sensibilidad, la autenticidad y la honestidad emocional.",
                     formatTitle: "FORMATO",
                     format: [
-                        "Extensión: 1,000–2,500 palabras",
-                        "Formato: Word o PDF",
+                        "Extensión: 1,000–1,500 palabras",
+                        "Formato: PDF",
                         "Fuente: Times New Roman, 12 pt, interlineado 1.5"
                     ],
-                    submissionTitle: "ENVÍO",
+                    submissionTitle: "Envío",
                     submission: [
                         "Enviar a: concurso@laultimaestacionfilm.com",
                         "Asunto: \"Concurso: Historias de Andén – [Nombre del autor]\""
@@ -1253,6 +1265,7 @@ export const dictionary: Dictionary = {
                 },
                 copyrightTitle: "DERECHOS DE AUTOR",
                 copyrightText: "Los autores conservan los derechos de autor sobre sus obras. Jackie Zambrano LLC / Hyper Creative Studios se reserva el derecho no exclusivo de publicación, difusión y adaptación de los textos seleccionados, citando siempre la autoría, sin compensación adicional.",
+                copyrightContact: "Para más información o si tienes preguntas puedes contactarnos por: concurso@laultimaestacionfilm.com",
                 finalistsTitle: "FINALISTAS",
                 finalistsAnnouncement: "Los finalistas se anunciarán el 15 de junio de 2026",
                 form: {
@@ -1262,7 +1275,8 @@ export const dictionary: Dictionary = {
                     phonePlaceholder: "Número de teléfono",
                     uploadLabel: "Subir archivo (Historia)",
                     submitButton: "Enviar Historia",
-                }
+                    availableDate: "El concurso iniciará el 29 de marzo de 2026.",
+                },
             },
             shop: {
                 title: "Souvenirs del Andén",
@@ -1374,7 +1388,7 @@ export const dictionary: Dictionary = {
                 { name: "Daniel Bethencourt Lambert", role: "Productor Ejecutivo, Supervisor de Postproducción & Editor", bio: "CEO y productor ejecutivo de Mar de Fondo LLC con más de 23 años de experiencia en medios audiovisuales, televisión y contenido digital. Máster en Dirección y Producción de Cine Digital por la Universidad de La Laguna, España.\n\nFue director general de Sun Channel y Sport Plus Channel en Venezuela y gerente de servicios gráficos de Venevisión, responsable del branding de la cadena. Ganador del Golden Promax Los Ángeles 2002 y Silver Latin BDA Argentina 2002. Ha sido jurado en Promax & BDA International y conferencista en foros internacionales de marketing deportivo.\n\nCon sede en Miami desde 2010, se especializa en dirección artística, gestión de proyectos y producción de contenido internacional. Su experiencia ejecutiva en cadenas de televisión de gran formato asegura estándares profesionales mientras opera en realidades presupuestarias del cine independiente.", img: "/Daniel Bethencourt.jpeg" },
                 { name: "Marielena Zuccaro", role: "Directora de Producción", bio: `Marielena Zuccaro es una productora audiovisual radicada en Estados Unidos y cofundadora de VAZU, empresa de servicios de producción que proporciona apoyo integral en set, suministros de producción, vehículos y sistemas de comunicación para facilitar la logística audiovisual sin contratiempos en producciones en el sur de Florida.\n\nDesde 2020, ha trabajado en cine, comerciales, videos musicales y televisión como coordinadora de producción, directora de producción y productora. Su portafolio incluye películas narrativas (Phoenix, The Devil Trap, Paper Empire), promocionales de televisión para Telemundo, Univision y Unimas, campañas de marca con Kenneth Cole, Hyundai, Baptist Health, Lowe's y Zara, además de videos musicales para Bad Bunny, Karol G, Shakira, Ozuna y Juanes.\n\nMarielena aporta estructura, sensibilidad creativa y visión empresarial a cada producción, comprendiendo tanto las exigencias artísticas como las logísticas del cine profesional.`, img: "/MARIELENA ZUCCARO.jpg" },
                 { name: "Charlie Nelson", role: "Director de Fotografía", bio: `Director y cinematógrafo nominado al Latin Grammy, conocido por su trabajo con artistas como Reik, Myke Towers, Ozuna, Camilo, Luis Fonsi y Grupo Firme. Ganador del Video del Año en los Heat Awards 2021 y de dos Premios Pepsi Music 2023, incluido el "Video del Año".\n\nSu video "Ojos Marrones" de Lasso fue reconocido por MTV como uno de los mejores de 2022. En 2023 ganó un Silver Telly Award por su proyecto para Hyundai. Fundador de la productora "We Want To Film", actualmente trabaja en su primer largometraje.\n\nCon sede en Miami, su estilo ecléctico, enfocado en la narrativa, ha sido destacado en los Premios Juventud y Billboard. Para La Última Estación, aporta su habilidad probada para capturar la intimidad emocional en cámara, traduciendo la visión del director en un lenguaje visual que honra la dignidad de los caregivers.`, img: "/Charlie Nelson.jpeg" },
-                { name: "Joe Centeno", role: "Director de Arte & Diseñador Gráfico | Branding", bio: "Director de arte senior, ilustrador y diseñador gráfico con más de 30 años de experiencia en dirección creativa y producción visual para cine, televisión, campañas publicitarias y contenido digital. Domina tanto técnicas análogas tradicionales (dibujo a mano alzada, ilustración con tinta, aerógrafo) como la producción digital avanzada.\n\nDesde 2010, es Director de Arte en Jackie Zambrano LLC/Hyper Creative Studios, donde ha creado el branding completo de La Última Estación. Ha desarrollado la identidad visual del talk show Geraldo en español para Latinoamérica, campañas para Western Union en Centroamérica y el Caribe, y branding para artistas como Cris Campocasso, Franco de Vita y Carlos Baute, además del branding de KOATI, película animada en Netflix.\n\nSu trabajo incluye storyboards para producciones de Celuloide y branding para conciertos internacionales en Venezuela (Alanis Morissette, Rubén Blades, Shakira, David Copperfield). Diseñador de la revista Miami para Niños, fusiona identidad visual y narrativa creando experiencias cohesivas.", img: "/Joe Centeno.jpg" },
+                { name: "Joe Centeno", role: "Director de Arte & Diseñador Gráfico | Branding", bio: "Director de arte senior, ilustrador y diseñador gráfico con más de 30 años de experiencia en dirección creativa y producción visual para cine, televisión, publicidad y contenido digital. Domina tanto técnicas análogas —dibujo a mano alzada, ilustración con tinta, aerógrafo— como la producción digital avanzada.\n\nDesde 2010, es director de arte en Jackie Zambrano LLC/Hyper Creative Studios, donde creó el branding integral de La Última Estación. Su portafolio incluye la identidad visual del talk show Geraldo en español, campañas para Western Union, BTL para artistas como Franco De Vita y Carlos Baute, la película animada (ahora serie en Netflix) KOATI, y eventos internacionales con Shakira, Rubén Blades y Alanis Morissette.\n\nLa Última Estación llegó a Joe de manera profundamente personal: vio a su madre desaparecer lentamente mientras cuidaba a sus padres y a su hermana, consumiéndose en ese amor silencioso hasta fallecer. Esa historia —la suya, la de ella— late en cada línea visual de este proyecto.", img: "/Joe Centeno.jpg" },
                 { name: "Alejandro Campos", role: "Compositor & Ingeniero de Audio", bio: `Compositor, productor musical, pianista y director de orquesta con sede en Miami. Ganador del premio ASCAP 2004 por "Así es la Vida", reconocida como Mejor Canción Pop del año e interpretada por Olga Tañón.\n\nHa compuesto la música original para 18 telenovelas transmitidas mundialmente, incluyendo La Revancha, Gata Salvaje y Eva Luna, para compañías como Fonovideo y Venevisión Productions. Como productor musical, ha trabajado con artistas de Sony Music como Franco de Vita, Chayanne, Leda Batisti y Axel, entre otros.\n\nSe ha presentado como pianista y director musical junto a figuras como Dionne Warwick, Christopher Cross, Arturo Sandoval y Jon Secada. Actualmente es Compositor en Residencia de la Miami Symphony Orchestra bajo la dirección del Maestro Eduardo Marturet. Para La Última Estación, crea un score original con el piano como instrumento principal.`, img: "/Alejandro Campos.jpg" },
                 { name: "Arturo Manuitt", role: "Primer Asistente de Dirección", bio: "Director ganador de dos premios Emmy Regional Suncoast (2019-2022), especializado en comerciales, videos musicales, televisión y cine. Ha dirigido producciones para Nickelodeon Latin America (ISA TKM, GRACHI, Every Witch Way) y Telemundo/NBC (Corazón Valiente, Santa Diabla).\n\nSu trabajo incluye campañas para marcas como Marvel, Paramount, L'Oréal y Universal Pictures, entre ellas Captain Marvel y Mission: Impossible – Fallout. Comenzó su carrera en Venezuela dirigiendo la primera sitcom con audiencia en vivo del país y telenovelas aclamadas internacionalmente para RCTV.\n\nComo primer asistente de dirección en La Última Estación, coordina todos los departamentos del film y gestiona el schedule de rodaje. Sus dos Emmys y su extensa experiencia en múltiples formatos garantizan una ejecución profesional bajo los timelines comprimidos de la producción independiente.", img: "/Arturo Manuitt.jpg" },
                 { name: `Arnaldo Rocco Bruno Barrios (“Nano”)`, role: "Segundo Asistente de Dirección", bio: `Arnaldo Rocco Bruno Barrios es director, guionista y productor audiovisual venezolano. Comenzó su carrera actoral a los 13 años, experiencia que lo llevó a desarrollarse también en dirección y producción.\n\nHa dirigido y escrito cortometrajes reconocidos internacionalmente, incluyendo José y Volver a casa, además de ser Selección Oficial en festivales como Spooky Empire Horror Film Festival. Es autor de la novela juvenil "Primitive".\n\nEn La Última Estación, se desempeñó como segundo asistente de dirección y estuvo a cargo del wrap del último día de rodaje, contribuyendo a completar con éxito una producción exigente en solo cuatro días.`, img: "/Arnaldo Rocco Bruno Barrios.jpg" },

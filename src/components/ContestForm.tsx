@@ -3,9 +3,18 @@
 import Image from "next/image";
 import { Upload } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
+import { useState, useEffect } from "react";
 
 export default function ContestForm() {
     const { t } = useLanguage();
+    const [isEnabled, setIsEnabled] = useState(false);
+
+    useEffect(() => {
+        const contestDate = new Date("2026-03-29T00:00:00-04:00");
+        const now = new Date();
+        setIsEnabled(now >= contestDate);
+    }, []);
+
     return (
         <section className="bg-transparent py-14 px-6 md:px-12 relative overflow-hidden">
             {/* Background blur/shadow */}
@@ -90,15 +99,37 @@ export default function ContestForm() {
                             </div>
 
                             {/* Submission */}
-                            <div className="space-y-3 bg-white/5 p-6 rounded-lg border border-white/5 hover:border-[#E8D860]/30 transition-colors">
-                                <h4 className="text-white font-bold uppercase text-sm tracking-wider border-l-4 border-[#E8D860] pl-3">
+                            <div className="space-y-6 bg-white/5 p-6 rounded-lg border border-white/5 hover:border-[#E8D860]/30 transition-colors flex flex-col items-center text-center">
+                                <h4 className="text-white font-bold uppercase text-sm tracking-wider border-l-4 border-[#E8D860] pl-3 self-start">
                                     {t.pages.contest.rules.submissionTitle}
                                 </h4>
-                                <ul className="list-none space-y-1 text-sm text-gray-400">
-                                    {t.pages.contest.rules.submission.map((item, i) => (
-                                        <li key={i} className="bg-white/10 px-3 py-1 rounded inline-block mr-2 mb-2 text-white">{item}</li>
-                                    ))}
-                                </ul>
+                                <div className="py-4 w-full flex flex-col items-center gap-4">
+                                    <a
+                                        href={isEnabled ? "https://docs.google.com/forms/d/1s17XzpqkUO6ukFx6adblA9l0iHixf_urHAPP2qEumdk/viewform?pli=1&pli=1&edit_requested=true" : undefined}
+                                        target={isEnabled ? "_blank" : undefined}
+                                        rel={isEnabled ? "noopener noreferrer" : undefined}
+                                        className={`inline-flex items-center justify-between gap-3 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform font-copperplate uppercase tracking-wider ${
+                                            isEnabled
+                                                ? "bg-[#278641] text-white shadow-[0_0_20px_rgba(232,216,96,0.2)] hover:shadow-[0_0_30px_rgba(232,216,96,0.4)] hover:-translate-y-1 active:scale-95"
+                                                : "bg-gray-600 text-gray-400 cursor-not-allowed opacity-60"
+                                        }`}
+                                        onClick={(e) => !isEnabled && e.preventDefault()}
+                                    >
+                                        Google Form
+                                        <Image
+                                            src="/Google_Drive_logo.png"
+                                            alt="Google Drive Logo"
+                                            width={24}
+                                            height={24}
+                                            className={`w-6 h-6 object-contain ${!isEnabled ? "grayscale opacity-50" : ""}`}
+                                        />
+                                    </a>
+                                    {!isEnabled && (
+                                        <p className="text-[#E8D860] text-sm font-medium animate-pulse">
+                                            {t.pages.contest.form.availableDate}
+                                        </p>
+                                    )}
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -138,6 +169,9 @@ export default function ContestForm() {
                             <h3 className="text-xl font-bold text-[#E8D860] uppercase tracking-widest">{t.pages.contest.copyrightTitle}</h3>
                             <p className="text-sm text-gray-400 leading-relaxed">
                                 {t.pages.contest.copyrightText}
+                            </p>
+                            <p className="text-sm text-[#E8D860] font-medium leading-relaxed">
+                                {t.pages.contest.copyrightContact}
                             </p>
                         </div>
                     </div>

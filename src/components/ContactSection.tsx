@@ -5,6 +5,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
+const TikTokIcon = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    </svg>
+);
+
 export default function ContactSection() {
     const { language, t } = useLanguage();
 
@@ -36,6 +51,9 @@ export default function ContactSection() {
                             <a href="https://www.youtube.com/@laultimaestacionfilm" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8D860] transition-colors">
                                 <Youtube className="w-5 h-5" />
                             </a>
+                            <a href="https://www.tiktok.com/@laultimaestacionfilm" target="_blank" rel="noopener noreferrer" className="hover:text-[#E8D860] transition-colors">
+                                <TikTokIcon className="w-5 h-5" />
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -46,8 +64,8 @@ export default function ContactSection() {
 
                     <p className="text-sm text-gray-300 max-w-xs">
                         {language === 'en'
-                            ? "Help us give voice to the 53 million invisible caregivers.\n\n100% tax-deductible | Fractured Atlas"
-                            : "Ayúdanos a dar voz a los 53 millones de cuidadores invisibles.\n\n100% deducible de impuestos | Fractured Atlas"}
+                            ? "Help us give voice to the 63 million invisible caregivers.\n\n100% tax-deductible | Fractured Atlas"
+                            : "Ayúdanos a dar voz a los 63 millones de cuidadores invisibles.\n\n100% deducible de impuestos | Fractured Atlas"}
                     </p>
 
                     {/* Ticket Image Link */}

@@ -38,6 +38,21 @@ export default function ProyeccionesPage() {
                 <p className="text-xl md:text-2xl text-[#E8D860] font-medium leading-relaxed pt-4">
                     {t.pages.screenings.announcement.follow}
                 </p>
+                <div className="pt-8 flex justify-center">
+                    <a
+                        href={t.pages.screenings.announcement.googleFormLink}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="inline-flex items-center justify-between gap-3 bg-[#278641] text-white font-bold py-4 px-8 rounded-xl transition-all duration-300 shadow-[0_0_20px_rgba(39,134,65,0.2)] hover:shadow-[0_0_30px_rgba(39,134,65,0.4)] transform hover:-translate-y-1 active:scale-95 text-md font-copperplate uppercase tracking-wider min-w-[200px]"
+                    >
+                        Google Form
+                        <img
+                            src="/Google_Drive_logo.png"
+                            alt="Google Drive Logo"
+                            className="w-6 h-6 object-contain"
+                        />
+                    </a>
+                </div>
             </section>
 
             {/* Private Screening Request Section */}
