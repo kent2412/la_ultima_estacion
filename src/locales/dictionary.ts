@@ -634,7 +634,7 @@ export const dictionary: Dictionary = {
                         { label: "Format:", value: "Season 1 · 10 episodes" },
                         { label: "Hosted by:", value: "Jackie Zambrano" },
                         { label: "Available on:", value: "YouTube" },
-                        { label: "Launch:", value: "May 2026" }
+                        { label: "Launch:", value: "Coming Soon" }
                     ],
                     podcastCtaTitle: "Want to participate in the podcast?",
                     podcastCtaText: "Email us at vocesdelanden@laultimaestacionfilm.com",
@@ -1110,7 +1110,7 @@ export const dictionary: Dictionary = {
                         { label: "Formato:", value: "Temporada 1 · 10 episodios" },
                         { label: "Conducción:", value: "Jackie Zambrano" },
                         { label: "Disponible en:", value: "YouTube" },
-                        { label: "Lanzamiento:", value: "Mayo 2026" }
+                        { label: "Lanzamiento:", value: "Próximamente" }
                     ],
                     podcastCtaTitle: "¿Quieres participar en el podcast?",
                     podcastCtaText: "Escríbenos a vocesdelanden@laultimaestacionfilm.com",
