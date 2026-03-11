@@ -5,6 +5,21 @@ import Link from "next/link";
 import Image from "next/image";
 import { useLanguage } from "@/context/LanguageContext";
 
+const TikTokIcon = ({ className }: { className?: string }) => (
+    <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className={className}
+    >
+        <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
+    </svg>
+);
+
 export default function NextStopSection() {
     const { t } = useLanguage();
     return (
@@ -34,15 +49,18 @@ export default function NextStopSection() {
                         </Link>
                     </div>
 
-                    <div className="flex gap-4">
-                        <Link href="https://www.instagram.com/laultimaestacionfilm?igsh=ejVrc2x6M3MycDc2" target="_blank" rel="noopener noreferrer" className="w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
+                    <div className="grid grid-cols-2 md:flex gap-4 w-full md:w-fit">
+                        <Link href="https://www.instagram.com/laultimaestacionfilm?igsh=ejVrc2x6M3MycDc2" target="_blank" rel="noopener noreferrer" className="w-full md:w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
                             <Instagram className="w-8 h-8" />
                         </Link>
-                        <Link href="https://www.facebook.com/share/1GSLYsAgBg/" target="_blank" rel="noopener noreferrer" className="w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
+                        <Link href="https://www.facebook.com/share/1GSLYsAgBg/" target="_blank" rel="noopener noreferrer" className="w-full md:w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
                             <Facebook className="w-8 h-8" />
                         </Link>
-                        <Link href="https://www.youtube.com/@laultimaestacionfilm" target="_blank" rel="noopener noreferrer" className="w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
+                        <Link href="https://www.youtube.com/@laultimaestacionfilm" target="_blank" rel="noopener noreferrer" className="w-full md:w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
                             <Youtube className="w-8 h-8" />
+                        </Link>
+                        <Link href="https://www.tiktok.com/@laultimaestacionfilm" target="_blank" rel="noopener noreferrer" className="w-full md:w-32 h-24 border border-[#ffffff] bg-[#2A2A2A] rounded-lg flex items-center justify-center text-white hover:bg-[#3A3A3A] transition-colors">
+                            <TikTokIcon className="w-8 h-8" />
                         </Link>
                     </div>
                 </div>
