@@ -1,7 +1,6 @@
 "use client";
 
 import Image from "next/image";
-import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 
 export default function EPKSection() {
@@ -42,14 +41,16 @@ export default function EPKSection() {
                         </p>
 
                         <div className="flex flex-wrap gap-4 justify-center md:justify-start pt-4">
-                            <button className="bg-[#E8D860] hover:bg-[#D4C345] text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-colors">
-                                {t.pages.press.buttons.pdf} <ArrowRight className="w-4 h-4" />
-                            </button>
-                            <button className="bg-[#E8D860] hover:bg-[#D4C345] text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-colors">
-                                {t.pages.press.buttons.flyer} <ArrowRight className="w-4 h-4" />
-                            </button>
-                            <button className="bg-[#E8D860] hover:bg-[#D4C345] text-black px-6 py-3 rounded-lg font-bold flex items-center gap-2 transition-colors">
-                                {t.pages.press.buttons.poster} <ArrowRight className="w-4 h-4" />
+                            <button disabled className="inline-flex items-center gap-3 bg-transparent border border-white/20 text-white/50 px-6 py-3 rounded-lg font-bold cursor-not-allowed opacity-60 text-sm uppercase tracking-wider">
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87.3 78" className="w-4 h-4 flex-shrink-0 opacity-50" aria-hidden="true">
+                                    <path d="M6.6 66.85l3.85 6.65c.8 1.4 1.95 2.5 3.3 3.3l13.75-23.8H0c0 1.55.4 3.1 1.2 4.5z" fill="#0066da" />
+                                    <path d="M43.65 25L29.9 1.2C28.55 2 27.4 3.1 26.6 4.5L1.2 48.35A9.14 9.14 0 000 52.8h27.5z" fill="#00ac47" />
+                                    <path d="M73.55 76.8c1.35-.8 2.5-1.9 3.3-3.3l1.6-2.75L86.1 57.3c.8-1.4 1.2-2.95 1.2-4.5H59.8L73.55 76.8z" fill="#ea4335" />
+                                    <path d="M43.65 25L57.4 1.2A9.14 9.14 0 0053 0H34.3c-1.55 0-3.1.4-4.4 1.2z" fill="#00832d" />
+                                    <path d="M59.8 52.8H27.5L13.75 76.6c1.35.8 2.9 1.2 4.45 1.2h50.9c1.55 0 3.1-.4 4.45-1.2z" fill="#2684fc" />
+                                    <path d="M73.4 26.45l-12.7-22c-.8-1.4-1.95-2.5-3.3-3.3L43.65 25 59.8 52.8h27.45c0-1.55-.4-3.1-1.2-4.5z" fill="#ffba00" />
+                                </svg>
+                                {t.pages.press.epkButtonLabel}
                             </button>
                         </div>
                     </div>
