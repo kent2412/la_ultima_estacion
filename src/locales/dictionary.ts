@@ -113,10 +113,21 @@ export interface Dictionary {
                 dossierText: string;
                 epkIncludes: string[]; // List of items
 
-                buttons: { pdf: string; flyer: string; poster: string; };
+                epkButtonLabel: string;
+                epkDriveLink: string;
 
                 notesTitle: string; // "Press Notes and Articles"
                 notesText: string; // "This section will be updated..."
+
+                contestPressKit: {
+                    title: string;
+                    subtitle: string;
+                    tagline: string;
+                    description: string;
+                    includes: string[];
+                    buttonLabel: string;
+                    driveLink: string;
+                };
             };
             screenings: {
                 title: string;
@@ -368,10 +379,21 @@ export interface Dictionary {
                 dossierText: string;
                 epkIncludes: string[];
 
-                buttons: { pdf: string; flyer: string; poster: string; };
+                epkButtonLabel: string;
+                epkDriveLink: string;
 
                 notesTitle: string;
                 notesText: string;
+
+                contestPressKit: {
+                    title: string;
+                    subtitle: string;
+                    tagline: string;
+                    description: string;
+                    includes: string[];
+                    buttonLabel: string;
+                    driveLink: string;
+                };
             };
             screenings: {
                 title: string;
@@ -658,27 +680,38 @@ export const dictionary: Dictionary = {
                 producerEmail: "jaz@jackiezambrano.com",
                 contactAddress: "Miami, FL",
 
-                dossierTitle: "Electronic Press Kit (EPK)",
-                epkAvailable: "Available: April 2026",
-                dossierText: "Press materials and media coverage. Every story deserves to be told. Find here everything needed to share The Last Station with your audience.\n\nThe press kit will include:",
+                dossierTitle: "La \u00DAltima Estaci\u00F3n (The Last Station) \u2013 Short Film",
+                epkAvailable: "Press Kit Available May 2026",
+                dossierText: "A story about caregiving, identity, and the emotional cost of showing up for others.\n\nBe part of the conversation.\n\nThe official press kit for The Last Station will be available in May 2026 and will include:",
                 epkIncludes: [
-                    "Short and extended synopsis in Spanish and English",
-                    "Writer and Director statements",
-                    "Complete technical and artistic credits",
-                    "High-resolution stills for publication",
-                    "Teaser/Trailer for download",
-                    "Logos, posters, and graphic materials",
-                    "Full bios of cast and creative team"
+                    "Short and extended synopsis (ES/EN)",
+                    "Writer and director statements",
+                    "Full credits (cast and crew)",
+                    "High-resolution images for publication",
+                    "Downloadable teaser/trailer",
+                    "Official posters and graphic materials",
+                    "Cast and creative team bios"
                 ],
 
-                buttons: {
-                    pdf: "[PDF Complete] Available April 2026",
-                    flyer: "[Flyer] Available April 2026",
-                    poster: "[Poster] Available April 2026",
-                },
+                epkButtonLabel: "Access the Press Kit (Coming Soon)",
+                epkDriveLink: "https://drive.google.com/drive/folders/1yhnOo-RNqAlhmiNi8DhDJ0InWrLwsVLC?usp=sharing",
 
                 notesTitle: "Press Notes and Articles",
-                notesText: "This section will be updated as media coverage of the project is published."
+                notesText: "This section will be updated as media coverage of the project is published.",
+
+                contestPressKit: {
+                    title: "Historias del Andén (Platform Stories) – International Literary Contest",
+                    subtitle: "Access the Press Kit",
+                    tagline: "Every caregiving story matters—and you can help amplify it.",
+                    description: "Access the official press kit for Platform Stories, an international literary contest that gives voice to caregivers worldwide.\n\nHere you'll find everything you need to publish, cover, or share this initiative with your audience:",
+                    includes: [
+                        "Press release ready for publication",
+                        "Official logos, posters, and graphic materials",
+                        "Jury bios and photos"
+                    ],
+                    buttonLabel: "Access the Press Kit on Google Drive",
+                    driveLink: "https://drive.google.com/drive/folders/1Gjbyrt6CqK6ihYcEzKLxrQB-eYUgxG-S?usp=drive_link"
+                }
             },
             screenings: {
                 title: "Itinerary",
@@ -980,6 +1013,12 @@ export const dictionary: Dictionary = {
                     role: "Juror",
                     bio: "Screenwriter and producer of the short film The Last Station, with over 30 years of experience as a copywriter and content creator. Bachelor's degree in Social Communication from Universidad Católica Andrés Bello (UCAB) with a diploma in Strategic Communication.\n\nHer editorial trajectory includes her role as editor of Miami para Niños magazine and contributor to Orgullosa, Procter & Gamble's Hispanic community. She has written for various publications, combining narrative sensitivity with editorial rigor.\n\nFounder of Hyper Creative Studios, she has led content projects for brands such as Café Bustelo and Western Union, specializing in storytelling with purpose and social impact.\n\nHer experience as a caregiver for over 20 years inspired the creation of The Last Station, a work of fiction that explores love, sacrifice, and human resilience. Her vision as a writer merges emotional truth with narrative structure, bringing a deep and human perspective to literary evaluation.",
                     img: "/Jackie Zambrano - jurado.png"
+                },
+                {
+                    name: "Libia Valdés Gregg",
+                    role: "Juror",
+                    bio: "Libia Valdés Gregg is a communications strategist, producer, and storyteller whose work bridges journalism, media, and cultural production with a deep commitment to social impact. Born in Caracas, Venezuela, she discovered the power of narrative through theatre and communication after beginning her career in technology at just 16.\n\nWith formal training in Theatre and Social Communication, Libia has built a multidisciplinary career spanning journalism, public relations, and purpose-driven cultural production. In 2016, she founded GV&A Productions \u2014 a firm dedicated to branding, image consulting, and community-centered events, now celebrating its 10th anniversary.\n\nHer work is guided by a core belief: that storytelling is a tool for visibility, empathy, and change. Her involvement with La \u00DAltima Estaci\u00F3n reflects her lifelong mission to elevate invisible narratives and restore dignity through the arts. For Libia, every story told is an act of collective healing.",
+                    img: "/Libia Vades Gregg.jpg"
                 }
             ]
         }
@@ -1126,7 +1165,7 @@ export const dictionary: Dictionary = {
 
                 contactInfoTitle: "Información de Contacto",
                 pressMediaLabel: "Prensa y Medios:",
-                email: "prensa@laultimaestacion.com", // Keeping strictly as requested for Spanish even if different domain
+                email: "prensa@laultimaestacionfilm.com",
                 phoneLabel: "Teléfono:",
                 phone: "+1 (786) 356-1385",
                 producerLabel: "Productora Ejecutiva:",
@@ -1134,27 +1173,38 @@ export const dictionary: Dictionary = {
                 producerEmail: "jaz@jackiezambrano.com",
                 contactAddress: "Miami, FL",
 
-                dossierTitle: "Dosier de Prensa Electrónico (EPK)",
-                epkAvailable: "Disponible: Abril 2026",
-                dossierText: "Material de prensa y cobertura mediática. Cada historia merece ser contada. Encuentra aquí todo lo necesario para compartir La Última Estación con tu audiencia.\n\nEl press kit incluirá:",
+                dossierTitle: "La Última Estación – Cortometraje",
+                epkAvailable: "Press Kit disponible en mayo 2026",
+                dossierText: "Una historia sobre el cuidado, la identidad y el costo emocional de estar para otros.\n\nSé parte de la conversación.\n\nEl press kit oficial de La Última Estación estará disponible en mayo de 2026 e incluirá:",
                 epkIncludes: [
-                    "Sinopsis (corta y extendida) en español e inglés",
+                    "Sinopsis corta y extendida (ES/EN)",
                     "Statement de guionista y director",
-                    "Fichas técnicas y artísticas completas",
-                    "Stills de alta resolución para publicación",
-                    "Teaser/Trailer para descarga",
-                    "Logos, pósters y materiales gráficos",
-                    "Bios completas del elenco y equipo creativo"
+                    "Créditos completos (equipo técnico y elenco)",
+                    "Imágenes en alta resolución para publicación",
+                    "Teaser/Trailer descargable",
+                    "Pósters y materiales gráficos oficiales",
+                    "Biografías del elenco y equipo creativo"
                 ],
 
-                buttons: {
-                    pdf: "[PDF Completo] Disponible Abril 2026",
-                    flyer: "[Flyer] Disponible Abril 2026",
-                    poster: "[Poster] Disponible Abril 2026",
-                },
+                epkButtonLabel: "Acceder al Press Kit (Próximamente)",
+                epkDriveLink: "https://drive.google.com/drive/folders/1yhnOo-RNqAlhmiNi8DhDJ0InWrLwsVLC?usp=sharing",
 
                 notesTitle: "Notas de Prensa y Artículos",
-                notesText: "Esta sección se actualizará conforme se publique cobertura mediática sobre el proyecto."
+                notesText: "Esta sección se actualizará conforme se publique cobertura mediática sobre el proyecto.",
+
+                contestPressKit: {
+                    title: "Historias del Andén – Concurso Literario Internacional",
+                    subtitle: "Descarga el Press Kit",
+                    tagline: "Cada historia de cuidado importa—y tú puedes ayudar a amplificarla.",
+                    description: "Accede al press kit oficial de Historias del Andén, un concurso literario internacional que da voz a cuidadores de todo el mundo.\n\nAquí encontrarás todo lo necesario para publicar, cubrir o compartir esta iniciativa con tu audiencia:",
+                    includes: [
+                        "Nota de prensa lista para publicación",
+                        "Logos, pósters y materiales gráficos oficiales",
+                        "Biografías del jurado y fotografías"
+                    ],
+                    buttonLabel: "Acceder al Press Kit en Google Drive",
+                    driveLink: "https://drive.google.com/drive/folders/1Gjbyrt6CqK6ihYcEzKLxrQB-eYUgxG-S?usp=drive_link"
+                }
             },
             screenings: {
                 title: "Itinerario",
@@ -1456,6 +1506,12 @@ export const dictionary: Dictionary = {
                     role: "Jurado",
                     bio: "Guionista y productora del cortometraje La Última Estación, con más de 30 años de experiencia como copywriter y creadora de contenido. Licenciada en Comunicación Social por la Universidad Católica Andrés Bello (UCAB) con diplomado en Comunicación Estratégica.\n\nSu trayectoria editorial incluye su rol como editora de la revista Miami para Niños y colaboradora de Orgullosa, la comunidad hispana de Procter & Gamble. Ha escrito para diversas publicaciones, combinando sensibilidad narrativa con rigor editorial.\n\nFundadora de Hyper Creative StudioS, ha liderado proyectos de contenido para marcas como Café Bustelo y Western Union, especializándose en storytelling con propósito e impacto social.\n\nSu experiencia como cuidadora durante más de 20 años inspiró la creación de La Última Estación, obra de ficción que explora el amor, el sacrificio y la resiliencia humana. Su visión como escritora fusiona la verdad emocional con la estructura narrativa, aportando una perspectiva profunda y humana a la evaluación literaria.",
                     img: "/Jackie Zambrano - jurado.png"
+                },
+                {
+                    name: "Libia Valdés Gregg",
+                    role: "Jurado",
+                    bio: "Libia Valdés Gregg es estratega de comunicaciones, productora y narradora cuya trayectoria conecta el periodismo, los medios y la producción cultural con un profundo compromiso con el impacto social. Nacida en Caracas, Venezuela, descubrió el poder de la narrativa a través del teatro y la comunicación tras iniciar su carrera en tecnología a los 16 años.\n\nCon formación en teatro y comunicación social, Libia ha construido una carrera multidisciplinaria que abarca el periodismo, las relaciones públicas y la producción cultural de propósito. En 2016 fundó GV&A Productions —firma dedicada al branding, la consultoría de imagen y los eventos con impacto comunitario— que celebra hoy su décimo aniversario.\n\nSu participación en La Última Estación refleja su misión de dar visibilidad a narrativas invisibles y devolver dignidad a través del arte. Para Libia, cada historia contada es un acto de sanación colectiva.",
+                    img: "/Libia Vades Gregg.jpg"
                 }
             ]
         }
