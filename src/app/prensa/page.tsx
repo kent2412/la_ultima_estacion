@@ -86,9 +86,6 @@ export default function PrensaPage() {
                         <h2 className="text-3xl md:text-4xl font-serif text-[#E8D860] uppercase tracking-wider">
                             {t.pages.press.contestPressKit.title}
                         </h2>
-                        <p className="text-xl text-[#E8D860]/80 font-medium uppercase tracking-widest">
-                            {t.pages.press.contestPressKit.subtitle}
-                        </p>
                     </div>
 
                     <div className="text-lg md:text-xl text-white/80 leading-relaxed max-w-3xl mx-auto space-y-8">
