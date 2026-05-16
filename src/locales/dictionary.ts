@@ -199,6 +199,7 @@ export interface Dictionary {
                     submitButton: string;
                     availableDate: string;
                     googleFormLink: string;
+                    submissionInstruction: string;
                 };
             };
             shop: {
@@ -463,6 +464,7 @@ export interface Dictionary {
                     submitButton: string;
                     availableDate: string;
                     googleFormLink: string;
+                    submissionInstruction: string;
                 };
             };
             shop: {
@@ -784,7 +786,7 @@ export const dictionary: Dictionary = {
                         "Format: PDF",
                         "Font: Times New Roman, 12 pt, 1.5 line spacing"
                     ],
-                    submissionTitle: "Submmision",
+                    submissionTitle: "Submissions closed",
                     submission: [
                         "Send to: concurso@laultimaestacionfilm.com",
                         "Subject: \"Contest: Platform Stories – [Author's Name]\""
@@ -837,6 +839,7 @@ export const dictionary: Dictionary = {
                     submitButton: "Submit Story",
                     availableDate: "The contest will start on March 29, 2026.",
                     googleFormLink: "https://docs.google.com/forms/d/16ObYtwxEXwUTFjtZaUCmPfkqVdKcI-JU56tHmlQxFRA/viewform?edit_requested=true",
+                    submissionInstruction: "Thank you for participating and good luck to all.",
                 }
             },
             shop: {
@@ -1277,7 +1280,7 @@ export const dictionary: Dictionary = {
                         "Formato: PDF",
                         "Fuente: Times New Roman, 12 pt, interlineado 1.5"
                     ],
-                    submissionTitle: "Envío",
+                    submissionTitle: "Convocatoria cerrada",
                     submission: [
                         "Enviar a: concurso@laultimaestacionfilm.com",
                         "Asunto: \"Concurso: Historias de Andén – [Nombre del autor]\""
@@ -1330,6 +1333,7 @@ export const dictionary: Dictionary = {
                     submitButton: "Enviar Historia",
                     availableDate: "El concurso iniciará el 29 de marzo de 2026.",
                     googleFormLink: "https://docs.google.com/forms/d/1s17XzpqkUO6ukFx6adblA9l0iHixf_urHAPP2qEumdk/viewform?pli=1&pli=1&edit_requested=true",
+                    submissionInstruction: "Gracias por participar y mucha suerte a todos.",
                 },
             },
             shop: {

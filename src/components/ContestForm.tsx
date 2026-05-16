@@ -100,35 +100,13 @@ export default function ContestForm() {
 
                             {/* Submission */}
                             <div className="space-y-6 bg-white/5 p-6 rounded-lg border border-white/5 hover:border-[#E8D860]/30 transition-colors flex flex-col items-center text-center">
-                                <h4 className="text-white font-bold uppercase text-sm tracking-wider border-l-4 border-[#E8D860] pl-3 self-start">
+                                <h4 className="text-white font-bold uppercase text-sm tracking-wider border-l-4 border-[#E8D860] pl-3 self-start mb-0">
                                     {t.pages.contest.rules.submissionTitle}
                                 </h4>
                                 <div className="py-4 w-full flex flex-col items-center gap-4">
-                                    <a
-                                        href={isEnabled ? t.pages.contest.form.googleFormLink : undefined}
-                                        target={isEnabled ? "_blank" : undefined}
-                                        rel={isEnabled ? "noopener noreferrer" : undefined}
-                                        className={`inline-flex items-center justify-between gap-3 font-bold py-4 px-8 rounded-xl transition-all duration-300 transform font-copperplate uppercase tracking-wider ${
-                                            isEnabled
-                                                ? "bg-[#278641] text-white shadow-[0_0_20px_rgba(232,216,96,0.2)] hover:shadow-[0_0_30px_rgba(232,216,96,0.4)] hover:-translate-y-1 active:scale-95"
-                                                : "bg-gray-600 text-gray-400 cursor-not-allowed opacity-60"
-                                        }`}
-                                        onClick={(e) => !isEnabled && e.preventDefault()}
-                                    >
-                                        Google Form
-                                        <Image
-                                            src="/Google_Drive_logo.png"
-                                            alt="Google Drive Logo"
-                                            width={24}
-                                            height={24}
-                                            className={`w-6 h-6 object-contain ${!isEnabled ? "grayscale opacity-50" : ""}`}
-                                        />
-                                    </a>
-                                    {!isEnabled && (
-                                        <p className="text-[#E8D860] text-sm font-medium animate-pulse">
-                                            {t.pages.contest.form.availableDate}
-                                        </p>
-                                    )}
+                                    <p className="text-sm text-gray-400 leading-relaxed max-w-md">
+                                        {t.pages.contest.form.submissionInstruction}
+                                    </p>
                                 </div>
                             </div>
                         </div>
