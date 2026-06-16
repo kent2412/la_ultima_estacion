@@ -169,6 +169,7 @@ export interface Dictionary {
                 openCallText: string;
                 scheduleTitle: string;
                 schedule: { date: string; event: string; }[];
+                winnersAnnouncementPopup: string;
                 rulesTitle: string;
                 rules: {
                     participantsTitle: string;
@@ -434,6 +435,7 @@ export interface Dictionary {
                 openCallText: string;
                 scheduleTitle: string;
                 schedule: { date: string; event: string; }[];
+                winnersAnnouncementPopup: string;
                 rulesTitle: string;
                 rules: {
                     participantsTitle: string;
@@ -769,6 +771,7 @@ export const dictionary: Dictionary = {
                     { date: "June 2026", event: "Awards Ceremony and Testimonial Recording\n(exact date and other details to be announced)" },
                     { date: "July 2026", event: "Publication of the Historias de Andén Anthology" }
                 ],
+                winnersAnnouncementPopup: "Important update: Due to the high volume of submissions received, winners will now be announced during the first week of July. Thank you for your patience and enthusiasm \u2014 the response has been incredible! More details coming soon.",
                 rulesTitle: "CONTEST GUIDELINES",
                 rules: {
                     participantsTitle: "PARTICIPANTS",
@@ -1263,6 +1266,7 @@ export const dictionary: Dictionary = {
                     { date: "Junio 2026", event: "Ceremonia de premiación y grabación de testimonios\n(fecha exacta y otros detalles por anunciar)" },
                     { date: "Julio 2026", event: "Publicación de la antología Historias de Andén" }
                 ],
+                winnersAnnouncementPopup: "Aviso importante: Debido al gran volumen de participaciones recibidas, el anuncio de los ganadores se pospone a la primera semana de julio. Agradecemos su paciencia y su entusiasmo \u2014 \u00a1fue incre\u00edble ver tanta participaci\u00f3n! Pronto compartiremos m\u00e1s detalles.",
                 rulesTitle: "BASES DEL CONCURSO",
                 rules: {
                     participantsTitle: "PARTICIPANTES",

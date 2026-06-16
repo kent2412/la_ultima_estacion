@@ -1,13 +1,14 @@
 "use client";
 
 import Image from "next/image";
-import { Upload } from "lucide-react";
+import { Upload, Info, X } from "lucide-react";
 import { useLanguage } from "@/context/LanguageContext";
 import { useState, useEffect } from "react";
 
 export default function ContestForm() {
     const { t } = useLanguage();
     const [isEnabled, setIsEnabled] = useState(false);
+    const [showWinnersPopup, setShowWinnersPopup] = useState(false);
 
     useEffect(() => {
         const contestDate = new Date("2026-03-29T00:00:00-04:00");
@@ -50,14 +51,51 @@ export default function ContestForm() {
                         <div className="max-w-3xl mx-auto bg-black/20 p-6 rounded-xl border border-white/5 shadow-inner">
                             <div className="grid gap-4">
                                 {t.pages.contest.schedule.map((item, index) => (
-                                    <div key={index} className="grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0 text-base">
+                                    <div
+                                        key={index}
+                                        className={`grid grid-cols-1 sm:grid-cols-[220px_1fr] gap-2 sm:gap-6 border-b border-white/5 pb-4 last:border-0 last:pb-0 text-base ${index === 3 ? 'cursor-pointer group/winner hover:bg-white/5 rounded-lg -mx-2 px-2 py-1 transition-all duration-200' : ''}`}
+                                        onClick={index === 3 ? () => setShowWinnersPopup(true) : undefined}
+                                    >
                                         <span className="text-[#E8D860] font-bold font-copperplate">{item.date}</span>
-                                        <span className="text-gray-300 leading-relaxed">{item.event}</span>
+                                        <span className={`leading-relaxed flex items-center gap-2 ${index === 3 ? 'text-[#E8D860] underline underline-offset-2 decoration-[#E8D860]/40 group-hover/winner:decoration-[#E8D860]' : 'text-gray-300'}`}>
+                                            {item.event}
+                                            {index === 3 && <Info className="w-4 h-4 text-[#E8D860] animate-pulse flex-shrink-0" />}
+                                        </span>
                                     </div>
                                 ))}
                             </div>
                         </div>
                     </div>
+
+                    {/* Winners Announcement Popup */}
+                    {showWinnersPopup && (
+                        <div
+                            className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm animate-[fadeIn_0.2s_ease-out]"
+                            onClick={() => setShowWinnersPopup(false)}
+                        >
+                            <div
+                                className="relative max-w-lg w-full bg-gradient-to-br from-[#1a1a2e] to-[#16213e] border border-[#E8D860]/30 rounded-2xl p-8 shadow-2xl shadow-[#E8D860]/10 animate-[scaleIn_0.25s_ease-out]"
+                                onClick={(e) => e.stopPropagation()}
+                            >
+                                <button
+                                    onClick={() => setShowWinnersPopup(false)}
+                                    className="absolute top-4 right-4 text-gray-400 hover:text-white transition-colors"
+                                    aria-label="Close"
+                                >
+                                    <X className="w-5 h-5" />
+                                </button>
+                                <div className="flex items-start gap-3 mb-4">
+                                    <Info className="w-6 h-6 text-[#E8D860] flex-shrink-0 mt-0.5" />
+                                    <h4 className="text-xl font-bold text-[#E8D860] font-copperplate uppercase tracking-wide">
+                                        {t.pages.contest.schedule[3]?.event}
+                                    </h4>
+                                </div>
+                                <p className="text-gray-200 leading-relaxed text-base">
+                                    {t.pages.contest.winnersAnnouncementPopup}
+                                </p>
+                            </div>
+                        </div>
+                    )}
 
                     {/* Rules */}
                     <div className="space-y-8">
